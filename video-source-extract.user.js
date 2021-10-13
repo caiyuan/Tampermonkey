@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         video-downloader
+// @name         video-source-extract
 // @namespace    https://github.com/caiyuan
 // @version      0.1
 // @description  视频下载器
