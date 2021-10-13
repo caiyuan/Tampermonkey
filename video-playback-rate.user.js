@@ -43,6 +43,8 @@
         <div rate="10" style="${rateButtionStyle}">10x</div>
         <div rate="15" style="${rateButtionStyle}">15x</div>
         <div rate="20" style="${rateButtionStyle}">20x</div>
+        <div rate="25" style="${rateButtionStyle}">25x</div>
+        <div rate="30" style="${rateButtionStyle}">30x</div>
         `;
 
     let rateButtionCollection = videoPlaybackRate.getElementsByTagName("div");
