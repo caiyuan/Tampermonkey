@@ -23,18 +23,19 @@
         right: 30px;
         width: 60px;
         text-align: center;
-        text-color: #333;
         z-index: 9999;
         cursor: pointer;
-        background-color: rgba(110,114,133,0.3);
+        background-color: rgba(110,114,133,0.5);
         border-radius: 5px;
         `;
 
     let rateButtionStyle = `
         margin: 5px;
-        padding: 3px;
-        background-color: rgba(110,114,133,0.5);
+        padding: 7px 5px 5px 5px;
+        background-color: rgba(110,114,133,0);
         border-radius: 5px;
+        border: solid 1px rgba(255,255,255,0.6);
+        color: rgba(255,255,255,0.6);
         `;
 
     videoPlaybackRate.innerHTML = `
