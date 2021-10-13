@@ -38,6 +38,12 @@
         color: rgba(255,255,255,0.6);
         `;
 
+    let rateButtionHighlight = `
+        ${rateButtionStyle};
+        border: solid 1px rgba(255,255,255,0.9);
+        color: rgba(255,255,255,0.9);
+        `;
+
     videoPlaybackRate.innerHTML = `
         <div rate="1" style="${rateButtionStyle}">原始</div>
         <div rate="3" style="${rateButtionStyle}">3x</div>
@@ -49,9 +55,18 @@
     let rateButtionCollection = videoPlaybackRate.getElementsByTagName("div");
     for(let i=0; i<rateButtionCollection.length; i++) {
         let rateButtion = rateButtionCollection[i];
-        rateButtion.addEventListener("click", function(o){
-            let rate = o.target.getAttribute("rate");
+        rateButtion.addEventListener("click", function(event){
+            let rate = event.target.getAttribute("rate");
             playbackRate(rate);
+        });
+
+        rateButtion.addEventListener("mousemove", function(event){
+            let btn = event.target;
+            btn.style = rateButtionHighlight;
+        });
+        rateButtion.addEventListener("mouseout", function(event){
+            let btn = event.target;
+            btn.style = rateButtionStyle;
         });
     }
 
