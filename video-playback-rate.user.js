@@ -56,9 +56,8 @@
         <div rate="16" style="${rateButtionStyle}">16x</div>
         `;
 
-    let rateButtionCollection = videoPlaybackRate.getElementsByTagName("div");
-    for(let i=0; i<rateButtionCollection.length; i++) {
-        let rateButtion = rateButtionCollection[i];
+    let rateButtionList = videoPlaybackRate.querySelectorAll("div");
+    rateButtionList.forEach(rateButtion => {
         rateButtion.addEventListener("click", function(event){
             let rate = event.target.getAttribute("rate");
             playbackRate(rate);
@@ -72,15 +71,14 @@
             let btn = event.target;
             btn.style = rateButtionStyle;
         });
-    }
+    });
 
     function playbackRate(rate) {
-        var videoCollection = document.getElementsByTagName("video");
-        for(let i=0; i<videoCollection.length; i++) {
-            let video = videoCollection[i];
+        var videoList = document.querySelectorAll("video");
+        videoList.forEach(video => {
             video.playbackRate = rate;
             video.play();
-        }
+        });
     }
 
 })();
