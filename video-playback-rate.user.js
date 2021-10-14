@@ -27,25 +27,25 @@
         text-align: center;
         z-index: 9999;
         cursor: pointer;
-        background-color: rgba(110,114,133,0.5);
         border-radius: 5px;
+        background-color: rgba(110,114,133,0.5);
         `;
 
     let rateButtionStyle = `
         margin: 5px;
         padding: 5px;
-        background-color: rgba(110,114,133,0);
-        border-radius: 5px;
-        border: solid 1px rgba(255,255,255,0.6);
-        color: rgba(255,255,255,0.6);
-        font-size: 13px;
         vertical-align: middle;
+        font-size: 13px;
+        color: rgba(255,255,255,0.3);
+        border: solid 1px rgba(255,255,255,0.3);
+        border-radius: 5px;
+        background-color: rgba(110,114,133,0);
         `;
 
     let rateButtionHighlight = `
         ${rateButtionStyle};
-        border: solid 1px rgba(255,255,255,0.9);
         color: rgba(255,255,255,0.9);
+        border: solid 1px rgba(255,255,255,0.9);
         `;
 
     videoPlaybackRate.innerHTML = `
