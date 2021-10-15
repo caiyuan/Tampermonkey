@@ -28,7 +28,7 @@
         z-index: 9999;
         cursor: pointer;
         border-radius: 5px;
-        background-color: rgba(110,114,133,0.5);
+        background-color: rgba(0,0,0,0.3);
         `;
 
     let rateButtionStyle = `
@@ -36,10 +36,10 @@
         padding: 5px;
         vertical-align: middle;
         font-size: 13px;
+        border-radius: 5px;
+        background-color: rgba(0,0,0,0);
         color: rgba(255,255,255,0.3);
         border: solid 1px rgba(255,255,255,0.3);
-        border-radius: 5px;
-        background-color: rgba(110,114,133,0);
         `;
 
     let rateButtionHighlight = `
