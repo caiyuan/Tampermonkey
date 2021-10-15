@@ -60,7 +60,7 @@
     rateButtionList.forEach(rateButtion => {
         rateButtion.addEventListener("click", function(event){
             let rate = event.target.getAttribute("rate");
-            playbackRate(rate);
+            playbackRate(parseFloat(rate));
         });
 
         rateButtion.addEventListener("mousemove", function(event){
