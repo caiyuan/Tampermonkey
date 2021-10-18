@@ -49,6 +49,7 @@
         `;
 
     videoPlaybackRate.innerHTML = `
+        <div volume="0" style="${rateButtionStyle}">静音</div>
         <div rate="1" style="${rateButtionStyle}">原始</div>
         <div rate="3" style="${rateButtionStyle}">3x</div>
         <div rate="5" style="${rateButtionStyle}">5x</div>
@@ -59,8 +60,13 @@
     let rateButtionList = videoPlaybackRate.querySelectorAll("div");
     rateButtionList.forEach(rateButtion => {
         rateButtion.addEventListener("click", function(event){
-            let rate = event.target.getAttribute("rate");
-            playbackRate(parseFloat(rate));
+            let target = event.target;
+
+            let rate = target.getAttribute("rate");
+            if(rate !== null) playbackRate(parseFloat(rate));
+
+            let volume = target.getAttribute("volume");
+            if(volume !== null) volumeChange(parseFloat(volume));
         });
 
         rateButtion.addEventListener("mousemove", function(event){
@@ -77,6 +83,14 @@
         var videoList = document.querySelectorAll("video");
         videoList.forEach(video => {
             video.playbackRate = rate;
+            video.play();
+        });
+    }
+
+    function volumeChange(volume) {
+        var videoList = document.querySelectorAll("video");
+        videoList.forEach(video => {
+            video.volume = volume;
             video.play();
         });
     }
