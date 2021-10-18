@@ -35,7 +35,7 @@
         margin: 5px;
         padding: 5px;
         vertical-align: middle;
-        font-size: 13px;
+        font-size: 12px;
         border-radius: 5px;
         background-color: rgba(0,0,0,0);
         color: rgba(255,255,255,0.3);
@@ -71,15 +71,11 @@
 
         rateButtion.addEventListener("mousemove", function(event){
             let btn = event.target;
-            if (btn instanceof HTMLDivElement) {
-                btn.style = rateButtionHighlight;
-            }
+            btn.style = rateButtionHighlight;
         });
         rateButtion.addEventListener("mouseout", function(event){
             let btn = event.target;
-            if (btn instanceof HTMLDivElement) {
-                btn.style = rateButtionStyle;
-            }
+            btn.style = rateButtionStyle;
         });
     });
 
