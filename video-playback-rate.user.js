@@ -90,7 +90,7 @@
     function volumeChange(volume) {
         var videoList = document.querySelectorAll("video");
         videoList.forEach(video => {
-            video.volume = (video.volume == 0 ? 0.75 : volume);
+            video.volume = (video.volume == 0 ? 0.30 : volume);
             video.play();
         });
     }
