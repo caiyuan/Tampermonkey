@@ -71,11 +71,15 @@
 
         rateButtion.addEventListener("mousemove", function(event){
             let btn = event.target;
-            btn.style = rateButtionHighlight;
+            if (btn instanceof HTMLDivElement) {
+                btn.style = rateButtionHighlight;
+            }
         });
         rateButtion.addEventListener("mouseout", function(event){
             let btn = event.target;
-            btn.style = rateButtionStyle;
+            if (btn instanceof HTMLDivElement) {
+                btn.style = rateButtionStyle;
+            }
         });
     });
 
