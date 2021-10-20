@@ -57,6 +57,34 @@
         <div rate="16" style="${rateButtionStyle}">16x</div>
         `;
 
+
+    let rateDisplay = videoPlaybackRate.querySelector("#rate-display");
+    rateDisplay.addEventListener("dblclick", function(event){
+        let displayMaps = [
+            {class: ".rate-fast", display: "none"},
+            {class: ".rate-slow", display: "block"}
+        ];
+        if (window.displayMaps != undefined) {
+            displayMaps = window.displayMaps;
+            displayMaps.forEach(i => {
+                if (i.display != "block") {
+                    i.display = "block";
+                } else {
+                    i.display = "none";
+                }
+            });
+        }
+        window.displayMaps = displayMaps;
+
+        window.displayMaps.forEach(i => {
+            videoPlaybackRate.querySelectorAll(i.class).forEach(rateButtion => {
+                rateButtion.style.display = i.display;
+            });
+        });
+    });
+    rateDisplay.dispatchEvent(new MouseEvent("dblclick"));
+
+
     let rateButtionList = videoPlaybackRate.querySelectorAll("div");
     rateButtionList.forEach(rateButtion => {
         rateButtion.addEventListener("click", function(event){
