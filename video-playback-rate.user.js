@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         video-playback-rate
-// @namespace    https://github.com/caiyuan
+// @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  倍速播放器
 // @author       Ryan
 // @include      *
-// @exclude      https://github.com/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
