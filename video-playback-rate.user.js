@@ -136,4 +136,9 @@
         video.setAttribute("preload","auto");
     }
 
+
+    if (document.querySelector("video") == null) {
+        document.body.removeChild(videoPlaybackRate);
+    }
+
 })();
