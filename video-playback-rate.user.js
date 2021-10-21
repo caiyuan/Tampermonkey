@@ -12,6 +12,8 @@
 (function() {
     'use strict';
 
+    // 构建控制器面板
+
     let videoPlaybackRate = document.createElement("div");
     videoPlaybackRate.setAttribute("id","videoPlaybackRate");
     document.body.append(videoPlaybackRate);
@@ -62,6 +64,7 @@
         <div class="rate-slow" rate="2" style="${rateButtionStyle}">2x</div>
         `;
 
+    // 控制器切换功能
 
     let rateDisplay = videoPlaybackRate.querySelector("#rate-display");
     rateDisplay.addEventListener("dblclick", function(event){
@@ -89,6 +92,7 @@
     });
     rateDisplay.dispatchEvent(new MouseEvent("dblclick"));
 
+    // 控制器功能实现
 
     let rateButtionList = videoPlaybackRate.querySelectorAll("div");
     rateButtionList.forEach(rateButtion => {
@@ -136,9 +140,15 @@
         video.setAttribute("preload","auto");
     }
 
+    // 控制器是否显示
 
-    if (document.querySelector("video") == null) {
-        document.body.removeChild(videoPlaybackRate);
-    }
+    videoPlaybackRate.style.display = "none";
+    setInterval(function(){
+        if (document.querySelector("video") == null) {
+            videoPlaybackRate.style.display = "none";
+        } else {
+            videoPlaybackRate.style.display = "block";
+        }
+    }, 3000);
 
 })();
