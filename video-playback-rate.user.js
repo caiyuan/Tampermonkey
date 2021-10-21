@@ -117,6 +117,8 @@
         videoList.forEach(video => {
             video.playbackRate = rate;
             video.play();
+
+            optVideo(video);
         });
     }
 
@@ -125,7 +127,13 @@
         videoList.forEach(video => {
             video.volume = (video.volume == 0 ? 0.30 : volume);
             video.play();
+
+            optVideo(video);
         });
+    }
+
+    function optVideo(video) {
+        video.setAttribute("preload","auto");
     }
 
 })();
