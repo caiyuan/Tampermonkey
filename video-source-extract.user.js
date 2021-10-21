@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         video-source-extract
-// @namespace    https://github.com/caiyuan
+// @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  视频下载器
 // @author       Ryan
 // @include      *
-// @exclude      https://github.com/*
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
