@@ -49,7 +49,7 @@
 
     videoPlaybackRate.innerHTML = `
         <div volume="0" style="${rateButtionStyle}">静音</div>
-        <div id="rate-display" rate="1" style="${rateButtionStyle}">原始</div>
+        <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
 
         <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
         <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
