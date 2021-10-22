@@ -4,8 +4,7 @@
 // @version      0.1
 // @description  倍速播放器
 // @author       Ryan
-// @include      *
-// @exclude      *.qq.com/*
+// @include      *.qq.com/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -55,14 +54,12 @@
         <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
 
         <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
-        <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
-        <div class="rate-fast" rate="10" style="${rateButtionStyle}">10x</div>
-        <div class="rate-fast" rate="16" style="${rateButtionStyle}">16x</div>
+        <div class="rate-fast" rate="3.5" style="${rateButtionStyle}">3.5x</div>
+        <div class="rate-fast" rate="3.99" style="${rateButtionStyle}">4x</div>
 
-        <div class="rate-slow" rate="1.25" style="${rateButtionStyle}">1.25x</div>
         <div class="rate-slow" rate="1.5" style="${rateButtionStyle}">1.5x</div>
-        <div class="rate-slow" rate="1.75" style="${rateButtionStyle}">1.75x</div>
         <div class="rate-slow" rate="2" style="${rateButtionStyle}">2x</div>
+        <div class="rate-slow" rate="2.5" style="${rateButtionStyle}">2.5x</div>
         `;
 
     // 控制器切换功能
@@ -118,34 +115,21 @@
     });
 
     function playbackRate(rate) {
-        var videoList = document.querySelectorAll("video");
-        videoList.forEach(video => {
-            video.playbackRate = rate;
-            video.play();
-
-            optVideo(video);
-        });
+        PLAYER.setVideoPlaybackRate(rate);
+        PLAYER.play();
     }
 
     function volumeChange(volume) {
-        var videoList = document.querySelectorAll("video");
-        videoList.forEach(video => {
-            video.volume = (video.volume == 0 ? 0.30 : volume);
-            video.play();
-
-            optVideo(video);
-        });
-    }
-
-    function optVideo(video) {
-        video.setAttribute("preload","auto");
+        let vol = (PLAYER.getVolume() == 0 ? 0.30 : volume);
+        PLAYER.setVolume(vol * 100);
+        PLAYER.play();
     }
 
     // 控制器是否显示
 
     videoPlaybackRate.style.display = "none";
     setInterval(function(){
-        if (document.querySelector("video") == null) {
+        if (typeof PLAYER == 'undefined') {
             videoPlaybackRate.style.display = "none";
         } else {
             videoPlaybackRate.style.display = "block";
