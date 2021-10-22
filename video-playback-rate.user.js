@@ -5,6 +5,7 @@
 // @description  倍速播放器
 // @author       Ryan
 // @include      *
+// @exclude      *.qq.com/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
