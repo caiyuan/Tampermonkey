@@ -54,15 +54,13 @@
         <div volume="0" style="${rateButtionStyle}">静音</div>
         <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
 
-        <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
         <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
         <div class="rate-fast" rate="10" style="${rateButtionStyle}">10x</div>
         <div class="rate-fast" rate="16" style="${rateButtionStyle}">16x</div>
 
-        <div class="rate-slow" rate="1.25" style="${rateButtionStyle}">1.25x</div>
+        <div class="rate-slow" rate="1.3" style="${rateButtionStyle}">1.3x</div>
         <div class="rate-slow" rate="1.5" style="${rateButtionStyle}">1.5x</div>
-        <div class="rate-slow" rate="1.75" style="${rateButtionStyle}">1.75x</div>
-        <div class="rate-slow" rate="2" style="${rateButtionStyle}">2x</div>
+        <div class="rate-slow" rate="1.7" style="${rateButtionStyle}">1.7x</div>
         `;
 
     // 控制器切换功能
