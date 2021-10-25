@@ -51,7 +51,7 @@
         `;
 
     videoPlaybackRate.innerHTML = `
-        <div volume="0" style="${rateButtionStyle}">静音</div>
+        <div volume="0" style="${rateButtionStyle}">音量</div>
         <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
 
         <div class="rate-fast" rate="2" style="${rateButtionStyle}">2x</div>
@@ -121,8 +121,16 @@
     }
 
     function volumeChange(volume) {
-        let vol = (PLAYER.getVolume() == 0 ? 0.30 : volume);
-        PLAYER.setVolume(vol * 100);
+        let v = PLAYER.getVolume();
+        if (v != 0) {
+            PLAYER.setVolume(volume * 100);
+        }
+        else if (v > 30 || v <= 0) {
+            PLAYER.setVolume(30);
+        } else {
+            let v = v - 5;
+            PLAYER.setVolume(v < 5 ? 0 : v);
+        }
         PLAYER.play();
     }
 
