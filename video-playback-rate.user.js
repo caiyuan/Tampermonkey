@@ -129,7 +129,14 @@
     function volumeChange(volume) {
         var videoList = document.querySelectorAll("video");
         videoList.forEach(video => {
-            video.volume = (video.volume == 0 ? 0.30 : volume);
+            if (volume != 0) {
+                video.volume = volume;
+            }
+            else if (video.volume >= 0.3 || video.volume <= 0) {
+                video.volume = 0.3;
+            } else {
+                video.volume = video.volume - 0.05;
+            }
             video.play();
 
             optVideo(video);
