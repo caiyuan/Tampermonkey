@@ -19,14 +19,15 @@
     document.body.append(videoPlaybackRate);
 
     videoPlaybackRate.style = `
-        position: fixed;
+        z-index: 1001 !important;
+        position: fixed !important;
+        visibility: visible !important;
         top: 30%;
         right: 30px;
         width: 60px;
         margin: 0;
         padding: 0;
         text-align: center;
-        z-index: 9999;
         cursor: pointer;
         border-radius: 5px;
         background-color: rgba(0,0,0,0.3);
