@@ -121,14 +121,14 @@
     }
 
     function volumeChange(volume) {
-        let v = PLAYER.getVolume();
-        if (v != 0) {
+        let pv = PLAYER.getVolume();
+        if (volume != 0) {
             PLAYER.setVolume(volume * 100);
         }
-        else if (v > 30 || v <= 0) {
+        else if (pv > 30 || pv <= 0) {
             PLAYER.setVolume(30);
         } else {
-            let v = v - 5;
+            let v = pv - 5;
             PLAYER.setVolume(v < 5 ? 0 : v);
         }
         PLAYER.play();
