@@ -52,7 +52,7 @@
         `;
 
     videoPlaybackRate.innerHTML = `
-        <div volume="0" style="${rateButtionStyle}">静音</div>
+        <div volume="0" style="${rateButtionStyle}">音量</div>
         <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
 
         <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
@@ -132,10 +132,11 @@
             if (volume != 0) {
                 video.volume = volume;
             }
-            else if (video.volume >= 0.3 || video.volume <= 0) {
+            else if (video.volume > 0.3 || video.volume <= 0) {
                 video.volume = 0.3;
             } else {
-                video.volume = video.volume - 0.05;
+                let v = video.volume - 0.05;
+                video.volume = v < 0.05 ? 0 : v;
             }
             video.play();
 
