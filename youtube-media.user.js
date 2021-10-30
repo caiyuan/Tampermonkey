@@ -31,6 +31,7 @@
         mediums.push(new Media(mimeType,qualityLabel,url));
     });
 
+    /*
     adaptiveFormats.forEach(source=>{
         let mimeType = source.mimeType;
         let qualityLabel = source.qualityLabel;
@@ -40,6 +41,7 @@
             mediums.push(new Media(mimeType,qualityLabel,url));
         }
     });
+    */
 
 
     console.log("");
