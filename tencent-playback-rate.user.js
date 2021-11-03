@@ -24,7 +24,7 @@
         visibility: visible !important;
         top: 30%;
         right: 30px;
-        width: 55px;
+        width: 50px;
         margin: 0;
         padding: 0;
         text-align: center;
