@@ -25,7 +25,7 @@
         visibility: visible !important;
         top: 30%;
         right: 30px;
-        width: 60px;
+        width: 55px;
         margin: 0;
         padding: 0;
         text-align: center;
@@ -35,8 +35,8 @@
         `;
 
     let rateButtionStyle = `
-        margin: 5px;
-        padding: 5px;
+        margin: 3px;
+        padding: 3px;
         vertical-align: middle;
         font-size: 12px;
         border-radius: 5px;
@@ -52,8 +52,8 @@
         `;
 
     videoPlaybackRate.innerHTML = `
-        <div volume="0" style="${rateButtionStyle}">音量</div>
-        <div id="rate-display" rate="1" style="${rateButtionStyle}">倍速</div>
+        <div volume="0" style="${rateButtionStyle}">Sound</div>
+        <div id="rate-display" rate="1" style="${rateButtionStyle}">Speed</div>
 
         <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
         <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
