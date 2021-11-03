@@ -29,7 +29,7 @@
         padding: 0;
         text-align: center;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: rgba(0,0,0,0.3);
         `;
 
