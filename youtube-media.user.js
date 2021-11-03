@@ -44,15 +44,13 @@
     */
 
 
-    console.log("");
-    console.log(ytInitialPlayerResponse.videoDetails.title);
+    console.log('%c ' + ytInitialPlayerResponse.videoDetails.title, 'padding:5px 0;');
     mediums.forEach(source=>{
-        console.table({
-            type: source.type,
-            quality: source.quality
-        });
-        console.log(source.url);
+        let type = source.type;
+        let quality = source.quality;
+        let url = source.url;
+
+        console.log('%c ' + quality + ' %c ' + url + ' ', 'color: #fadfa3; background: #030307; padding:5px 0;', 'padding:5px 0;');
     });
-    console.log("");
 
 })();
