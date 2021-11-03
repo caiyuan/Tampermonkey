@@ -132,8 +132,8 @@
             if (volume != 0) {
                 video.volume = volume;
             }
-            else if (video.volume > 0.3 || video.volume <= 0) {
-                video.volume = 0.3;
+            else if (video.volume > 0.15 || video.volume <= 0) {
+                video.volume = 0.15;
             } else {
                 let v = video.volume - 0.05;
                 video.volume = v < 0.05 ? 0 : v;
