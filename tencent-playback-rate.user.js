@@ -128,8 +128,8 @@
         else if (pv > 15 || pv <= 0) {
             PLAYER.setVolume(15);
         } else {
-            let v = pv - 5;
-            PLAYER.setVolume(v < 5 ? 0 : v);
+            let v = pv - 3;
+            PLAYER.setVolume(v < 3 ? 0 : v);
         }
         PLAYER.play();
     }
