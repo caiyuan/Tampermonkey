@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         douban-ratings
+// @name         douban-movie
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  豆瓣电影评分扩展
