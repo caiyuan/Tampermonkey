@@ -12,22 +12,12 @@
 (function() {
     'use strict';
 
-
     let info = document.querySelector("div#info");
     info.childNodes.forEach(node=>{
         if (node.nodeType == 3) {
-            let text = node.textContent;
-            text = text.replaceAll(/ |:|\n|\t/ig, "");
-            if (text.length > 0 && text.indexOf("tt") == 0) {
-                let imdbNumber = text;
-                let imdbText = node
-                let href = "https://www.imdb.com/title/" + imdbNumber;
-
-                // let imdbHref = document.createElement("a");
-                // imdbHref.setAttribute("href", href);
-                // imdbHref.setAttribute("target", "_blank");
-                // imdbHref.innerText = " " + imdbNumber;
-                // info.replaceChild(imdbHref, imdbText);
+            let imdb = node.textContent.replaceAll(/ |:|\n|\t/ig, "");
+            if (imdb.length > 0 && imdb.indexOf("tt") == 0) {
+                let href = "https://www.imdb.com/title/" + imdb;
 
                 let imdbSectl = document.createElement("div");
                 imdbSectl.setAttribute("class", "rating_betterthan");
