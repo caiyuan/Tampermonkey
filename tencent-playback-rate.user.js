@@ -126,11 +126,11 @@
         if (volume != 0) {
             PLAYER.setVolume(volume * 100);
         }
-        else if (pv > 15 || pv <= 0) {
-            PLAYER.setVolume(15);
+        else if (pv > 100 || pv <= 0) {
+            PLAYER.setVolume(100);
         } else {
-            let v = pv - 3;
-            PLAYER.setVolume(v < 3 ? 0 : v);
+            let v = pv - 25;
+            PLAYER.setVolume(v < 25 ? 0 : v);
         }
         PLAYER.play();
     }
