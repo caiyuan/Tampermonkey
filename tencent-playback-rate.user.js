@@ -130,7 +130,7 @@
             PLAYER.setVolume(100);
         } else {
             let v = pv - 15;
-            PLAYER.setVolume(v < 15 ? 0 : v);
+            PLAYER.setVolume(v < 0 ? 0 : v);
         }
         PLAYER.play();
     }
