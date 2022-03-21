@@ -137,7 +137,7 @@
                 video.volume = 1;
             } else {
                 let v = video.volume - 0.15;
-                video.volume = v < 0.15 ? 0 : v;
+                video.volume = v < 0 ? 0 : v;
             }
             video.play();
 
