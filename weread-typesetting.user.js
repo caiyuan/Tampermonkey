@@ -17,6 +17,6 @@
     /* 背景 */
     GM_addStyle("html body.wr_whiteTheme {background-color: #EDF4EC;}");
     GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #f7f7f7;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #f7f7f7;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #f5f5f5;}");
 
 })();
