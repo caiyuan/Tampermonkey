@@ -15,8 +15,9 @@
     GM_addStyle(".readerChapterContent * {font-family: 'FZSHENGSKS_ZHUNJW--GB1-0','MicrosoftYaHei','PingFang SC'; !important;}");
 
     /* 背景 */
-    GM_addStyle("html body.wr_whiteTheme {background-color: #EDF4EC;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #f7f7f7;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #f5f5f5;}");
+    GM_addStyle("html body.wr_whiteTheme {background-color: #35363a;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #f7f1e4;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #f7f1e4;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #f7f1e4;}");
 
 })();
