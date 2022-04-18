@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         video-playback-rate
+// @name         media-playback-rate
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  倍速播放器
 // @author       Ryan
-// @include      *
+// @match        *
 // @exclude      *.qq.com/*
 // @grant        none
 // @run-at       document-end
@@ -15,11 +15,11 @@
 
     // 构建控制器面板
 
-    let videoPlaybackRate = document.createElement("div");
-    videoPlaybackRate.setAttribute("id","videoPlaybackRate");
-    document.body.append(videoPlaybackRate);
+    let mediaPlaybackRate = document.createElement("div");
+    mediaPlaybackRate.setAttribute("id","mediaPlaybackRate");
+    document.body.append(mediaPlaybackRate);
 
-    videoPlaybackRate.style = `
+    mediaPlaybackRate.style = `
         z-index: 1001 !important;
         position: fixed !important;
         visibility: visible !important;
@@ -52,7 +52,7 @@
         border: solid 1px rgba(255,255,255,0.9);
         `;
 
-    videoPlaybackRate.innerHTML = `
+    mediaPlaybackRate.innerHTML = `
         <div volume="0" style="${rateButtionStyle}">Sound</div>
         <div id="rate-display" rate="1" style="${rateButtionStyle}">Speed</div>
 
@@ -67,7 +67,7 @@
 
     // 控制器切换功能
 
-    let rateDisplay = videoPlaybackRate.querySelector("#rate-display");
+    let rateDisplay = mediaPlaybackRate.querySelector("#rate-display");
     rateDisplay.addEventListener("dblclick", function(event){
         let displayMaps = [
             {class: ".rate-fast", display: "none"},
@@ -86,7 +86,7 @@
         window.displayMaps = displayMaps;
 
         window.displayMaps.forEach(i => {
-            videoPlaybackRate.querySelectorAll(i.class).forEach(rateButtion => {
+            mediaPlaybackRate.querySelectorAll(i.class).forEach(rateButtion => {
                 rateButtion.style.display = i.display;
             });
         });
@@ -95,7 +95,7 @@
 
     // 控制器功能实现
 
-    let rateButtionList = videoPlaybackRate.querySelectorAll("div");
+    let rateButtionList = mediaPlaybackRate.querySelectorAll("div");
     rateButtionList.forEach(rateButtion => {
         rateButtion.addEventListener("click", function(event){
             let target = event.target;
@@ -117,46 +117,61 @@
         });
     });
 
-    function playbackRate(rate) {
+    function mediaSelector(){
         var videoList = document.querySelectorAll("video");
-        videoList.forEach(video => {
-            video.playbackRate = rate;
-            video.play();
+        var audioList = document.querySelectorAll("audio");
 
-            optVideo(video);
+        if(videoList.length != 0) {
+            return videoList;
+        }
+        if(audioList.length != 0) {
+            return audioList;
+        }
+        return [];
+    }
+
+    function playbackRate(rate) {
+        var mediaList = mediaSelector();
+
+        mediaList.forEach(media => {
+            media.playbackRate = rate;
+            media.play();
+
+            optMedia(media);
         });
     }
 
     function volumeChange(volume) {
-        var videoList = document.querySelectorAll("video");
-        videoList.forEach(video => {
+        var mediaList = mediaSelector();
+        mediaList.forEach(media => {
             if (volume != 0) {
-                video.volume = volume;
+                media.volume = volume;
             }
-            else if (video.volume > 1 || video.volume <= 0) {
-                video.volume = 1;
+            else if (media.volume > 1 || media.volume <= 0) {
+                media.volume = 1;
             } else {
-                let v = video.volume - 0.15;
-                video.volume = v < 0 ? 0 : v;
+                let v = media.volume - 0.15;
+                media.volume = v < 0 ? 0 : v;
             }
-            video.play();
+            media.play();
 
-            optVideo(video);
+            optMedia(media);
         });
     }
 
-    function optVideo(video) {
-        video.setAttribute("preload","auto");
+    function optMedia(media) {
+        media.setAttribute("preload","auto");
     }
 
     // 控制器是否显示
 
-    videoPlaybackRate.style.display = "none";
+    mediaPlaybackRate.style.display = "none";
     setInterval(function(){
-        if (document.querySelector("video") == null) {
-            videoPlaybackRate.style.display = "none";
+        var mediaList = mediaSelector();
+        if (mediaList.length == 0) {
+            mediaPlaybackRate.style.display = "none";
         } else {
-            videoPlaybackRate.style.display = "block";
+            mediaPlaybackRate.style.display = "block";
         }
     }, 3000);
 
