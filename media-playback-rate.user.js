@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  倍速播放器
 // @author       Ryan
-// @match        *
+// @include      *
 // @exclude      *.qq.com/*
 // @grant        none
 // @run-at       document-end
