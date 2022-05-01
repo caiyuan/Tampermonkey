@@ -64,6 +64,7 @@
         <div class="rate-slow" rate="1.3" style="${rateButtionStyle}">1.3x</div>
         <div class="rate-slow" rate="1.5" style="${rateButtionStyle}">1.5x</div>
         <div class="rate-slow" rate="1.7" style="${rateButtionStyle}">1.7x</div>
+        <div class="rate-slow" rate="2" style="${rateButtionStyle}">2x</div>
         `;
 
     // 控制器切换功能
