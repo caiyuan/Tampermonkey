@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         video-source-extract
+// @name         media-extract
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  视频下载器
