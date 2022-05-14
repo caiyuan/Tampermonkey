@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         media-playback-rate
+// @name         media-playbackrate
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  倍速播放器
