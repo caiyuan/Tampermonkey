@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         douban-book
+// @name         douban-goodreads
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  豆瓣读书评分扩展
