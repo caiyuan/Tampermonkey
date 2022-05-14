@@ -4,7 +4,7 @@
 // @version          0.1
 // @description    混沌学园版面重排
 // @author           Ryan
-// @match            https://www.hundun.cn/course/*
+// @match            /^https://www.hundun.cn/course/\w+$/
 // @grant             GM_addStyle
 // ==/UserScript==
 
