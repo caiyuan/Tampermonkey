@@ -39,6 +39,7 @@
         vertical-align: middle;
         font-size: 12px;
         font-family: serif;
+        font-weight: lighter;
         border-radius: 3px;
         background-color: rgba(0,0,0,0);
         color: rgba(255,255,255,0.3);
