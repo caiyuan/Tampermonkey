@@ -56,8 +56,9 @@
         <div volume="0" style="${rateButtionStyle}">Sound</div>
         <div id="rate-display" rate="1" style="${rateButtionStyle}">Speed</div>
 
+        <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
         <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
-        <div class="rate-fast" rate="10" style="${rateButtionStyle}">10x</div>
+        <div class="rate-fast" rate="7" style="${rateButtionStyle}">7x</div>
         <div class="rate-fast" rate="16" style="${rateButtionStyle}">16x</div>
 
         <div class="rate-slow" rate="1.3" style="${rateButtionStyle}">1.3x</div>
