@@ -6,7 +6,6 @@
 // @author            Ryan
 // @include           /^https://www.hundun.cn/course/\w+$/
 // @grant             GM_addStyle
-// @run-at            document-end
 // ==/UserScript==
 
 (function() {
