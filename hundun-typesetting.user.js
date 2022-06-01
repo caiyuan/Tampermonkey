@@ -5,17 +5,12 @@
 // @description       混沌学园版面重排
 // @author            Ryan
 // @include           /^https://www.hundun.cn/course/\w+$/
-// @grant             GM_addStyle
+// @grant             none
 // @run-at            document-end
 // ==/UserScript==
 
 (function() {
     'use strict';
-
-    // GM_addStyle(".navigation-container {display: none;}");
-
-
-    // 控制器功能实现
 
     let navigationDisplay = document.createElement("div");
     navigationDisplay.setAttribute("id", "navigationDisplay");
