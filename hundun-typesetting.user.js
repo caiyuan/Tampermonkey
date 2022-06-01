@@ -4,7 +4,7 @@
 // @version           0.1
 // @description       混沌学园版面重排
 // @author            Ryan
-// @include           /^https://www.hundun.cn/course/\w+$/
+// @include           https://www.hundun.cn/course/*
 // @grant             none
 // @run-at            document-end
 // ==/UserScript==
