@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle(".readerChapterContent * {font-family: 'FZSHENGSKS_ZHUNJW--GB1-0','MicrosoftYaHei','PingFang SC'; !important;}");
+    GM_addStyle(".readerChapterContent * {font-family: 'FZSHENGSKS_ZHUNJW--GB1-0','MicrosoftYaHei','PingFang SC' !important;}");
 
     /* 背景 */
     GM_addStyle("html body.wr_whiteTheme {background-color: #35363a;}");
