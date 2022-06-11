@@ -103,7 +103,6 @@
     function lightareOff3() {
         let stefanvdlightareoff = document.body.querySelector("#stefanvdlightareoff");
         stefanvdlightareoff.remove();
-        
         let videoContainer = document.body.querySelector("#videoContainer");
         videoContainer.removeAttribute("class");
         videoContainer.removeAttribute("style");
