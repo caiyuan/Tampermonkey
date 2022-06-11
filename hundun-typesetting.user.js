@@ -66,8 +66,10 @@
             navigationContainerList.forEach(navigationContainer => {
                 if(value==1) {
                     navigationContainer.setAttribute("style","display: none;");
+                    lightareOff(0);
                 } else {
                     navigationContainer.setAttribute("style", "display: display;");
+                    lightareOff(1);
                 }
             });
         });
@@ -81,5 +83,36 @@
             btn.style = displayButtionStyle;
         });
     });
+
+
+    // 关灯效果
+
+    function lightareOff1() {
+        let stefanvdlightareoff = document.createElement("div");
+        stefanvdlightareoff.setAttribute("id", "stefanvdlightareoff");
+        stefanvdlightareoff.setAttribute("style", "width: 100%; height: 100%; left: 0px; top: 0px; position: fixed; background: rgb(0, 0, 0); opacity: 0.8; z-index: 999;");
+        document.body.append(stefanvdlightareoff);
+    }
+
+    function lightareOff2() {
+        let videoContainer = document.body.querySelector("#videoContainer");
+        videoContainer.setAttribute("class", "stefanvdvideotop");
+        videoContainer.setAttribute("style", "z-index: 1001 !important; position: relative !important; visibility: visible !important;");
+    }
+
+    function lightareOff3() {
+        let stefanvdlightareoff = document.body.querySelector("#stefanvdlightareoff");
+        stefanvdlightareoff.remove();
+    }
+
+    function lightareOff(lever) {
+        if(0 == lever) {
+            lightareOff1();
+            lightareOff2();
+        }
+        if(1 == lever) {
+            lightareOff3();
+        }
+    }
 
 })();
