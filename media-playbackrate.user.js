@@ -6,6 +6,7 @@
 // @author       Ryan
 // @include      *
 // @exclude      *.qq.com/*
+// @exclude      *.hundun.cn/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
