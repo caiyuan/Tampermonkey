@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name              hundun-typesetting
+// @name              hundun-live
 // @namespace         https://github.com/caiyuan/Tampermonkey
 // @version           0.1
 // @description       混沌学园版面重排
