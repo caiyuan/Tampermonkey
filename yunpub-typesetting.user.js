@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle("body {font-family: 'FZSHENGSKS_ZHUNJW--GB1-0','MicrosoftYaHei','PingFang SC';}");
+    GM_addStyle("body {font-family: 'MiSans' !important;}");
     GM_addStyle("body>p {font-size: 22px; color: #353535;}");
 
     /* 背景 */
