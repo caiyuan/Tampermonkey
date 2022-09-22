@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle(".readerChapterContent * {font-family: '微软雅黑','方正盛世楷书简体' !important;}");
+    GM_addStyle(".readerChapterContent * {font-family: 'MiSans' !important;}");
 
     /* 页宽 */
     GM_addStyle(".readerContent .app_content {max-width: 70%;}");
