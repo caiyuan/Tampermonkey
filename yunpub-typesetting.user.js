@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle("body {font-family: 'MiSans' !important;}");
+    GM_addStyle("body {font-family: 'MiSans-ExtraLight' !important;}");
     GM_addStyle("body>p {font-size: 22px; color: #353535;}");
 
     /* 背景 */
