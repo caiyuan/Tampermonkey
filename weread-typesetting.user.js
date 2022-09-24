@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle(".readerChapterContent * {font-family: 'MiSans' !important;}");
+    GM_addStyle(".readerChapterContent * {font-family: 'MiSans-ExtraLight' !important;}");
 
     /* 页宽 */
     GM_addStyle(".readerContent .app_content {max-width: 70%;}");
