@@ -24,8 +24,8 @@
     /* 浅色 */
     GM_addStyle("html body.wr_whiteTheme {background-color: #323232;}");
     GM_addStyle(".wr_whiteTheme .readerContent * {color: #000 !important;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #789;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #789;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #7E8E9E;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #7E8E9E;}");
     GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #708090;}");
 
 })();
