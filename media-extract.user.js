@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  视频下载器
 // @author       Ryan
-// @include      *
+// @match        *.hundun.cn/*
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
