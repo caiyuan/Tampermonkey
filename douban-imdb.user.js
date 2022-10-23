@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  豆瓣电影评分扩展
 // @author       Ryan
-// @include      https://movie.douban.com/subject/*
+// @match        https://movie.douban.com/subject/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
