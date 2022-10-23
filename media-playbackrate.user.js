@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  倍速播放器
 // @author       Ryan
-// @include      *
+// @match        *
 // @exclude      *.qq.com/*
 // @exclude      *.hundun.cn/*
 // @grant        none
