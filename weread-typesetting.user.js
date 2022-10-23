@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  微信读书排版优化
 // @author       Ryan
-// @include      https://weread.qq.com/web/reader/*
+// @match        https://weread.qq.com/web/reader/*
 // @grant        GM_addStyle
 // ==/UserScript==
 
