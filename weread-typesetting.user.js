@@ -12,7 +12,7 @@
     'use strict';
 
     /* 字体 */
-    GM_addStyle(".readerChapterContent * {font-family: 'MiSans' !important;}");
+    GM_addStyle(".readerChapterContent * {font-family: 'PingFangSC'}");
 
     /* 页宽 */
     GM_addStyle(".readerContent .app_content {max-width: 70%;}");
@@ -23,9 +23,9 @@
 
     /* 浅色 */
     GM_addStyle("html body.wr_whiteTheme {background-color: #323232;}");
-    GM_addStyle(".wr_whiteTheme .readerContent * {color: #000 !important;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #7E8E9E;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #7E8E9E;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #708090;}");
+    GM_addStyle(".wr_whiteTheme .readerContent * {color: #262523;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #F7F1E4;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #F7F1E4;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #B98A2B;}");
 
 })();
