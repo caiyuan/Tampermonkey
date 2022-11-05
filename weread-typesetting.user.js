@@ -27,6 +27,6 @@
     GM_addStyle(".wr_whiteTheme .readerContent .toolbarItem_text {color: #F7F1E4;}");
     GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #F7F1E4;}");
     GM_addStyle(".wr_whiteTheme .readerContent .readerTopBar {background-color: #F7F1E4;}");
-    GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #B98A2B;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .readerFooter button {background-color: #F7F1E4; color: #B98A2B;}");
 
 })();
