@@ -11,9 +11,6 @@
 (function() {
     'use strict';
 
-    /* 字体 */
-    GM_addStyle(".readerChapterContent * {font-family: 'PingFangSC'}");
-
     /* 页宽 */
     GM_addStyle(".readerContent .app_content {max-width: 70%;}");
     GM_addStyle(".readerContent .readerTopBar {width: 70%; max-width: none;}");
