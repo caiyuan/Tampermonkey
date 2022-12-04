@@ -52,12 +52,15 @@
 
             fileLink.download = `${document.title}.${type}`;
             fileLink.href = URL.createObjectURL(fileBlob);
+            fileLink.target = "_blank";
             fileLink.style.display = "none";
 
             document.body.appendChild(fileLink);
 
             fileLink.click();
+            /*
             fileLink.remove();
+            */
         });
         uint8ArrayMaps.splice(0, uint8ArrayMaps.length);
     }
