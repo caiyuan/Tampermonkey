@@ -18,4 +18,6 @@
     GM_addStyle(".readerContent .readerCatalog {left: 60%;}");
     GM_addStyle(".readerContent .readerNotePanel {left: 60%;}");
 
+    /* 字体 */
+    GM_addStyle(".readerContent * {font-family: 'Noto Sans SC';}");
 })();
