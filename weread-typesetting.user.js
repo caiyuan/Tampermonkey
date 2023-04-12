@@ -24,7 +24,7 @@
     GM_addStyle(".readerContent * {font-family: 'Noto Sans SC';}");
 
     /* 浅色 */
-    GM_addStyle("html body.wr_whiteTheme {background-color: #a6c9abcc;}");
+    GM_addStyle("html body.wr_whiteTheme {background-color: #a6c9abd9;}");
     GM_addStyle("html body.wr_whiteTheme .readerTopBar {background-color: #a6c9ab;}");
     GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #a6c9ab;}");
     GM_addStyle("html body.wr_whiteTheme .readerHeaderButton {color: #14801d;}");
