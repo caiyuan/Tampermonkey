@@ -29,5 +29,6 @@
     GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #a6c9ab;}");
     GM_addStyle("html body.wr_whiteTheme .readerHeaderButton {color: #14801d;}");
     GM_addStyle("html body.wr_whiteTheme .readerFooter_button {color: #14801d;}");
+    GM_addStyle("html body.wr_whiteTheme .readerChapterContent {color: #333333;}");
 
 })();
