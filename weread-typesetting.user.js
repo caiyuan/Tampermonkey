@@ -22,7 +22,7 @@
     GM_addStyle(".readerContent .readerNotePanel {left: 55%;}");
 
     /* 字体 */
-    GM_addStyle(".readerContent * {font-family: 'Noto Sans SC';}");
+    GM_addStyle(".readerContent * {font-family: 'Noto Serif SC','Noto Sans SC';}");
 
 
     /***** 浅色主题 *****/
