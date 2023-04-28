@@ -33,7 +33,7 @@
     GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #a6c9ab;}");
     GM_addStyle("html body.wr_whiteTheme .readerHeaderButton {color: #14801d;}");
     GM_addStyle("html body.wr_whiteTheme .readerFooter_button {color: #14801d;}");
-    GM_addStyle("html body.wr_whiteTheme .readerChapterContent {color: #111111;}");
+    GM_addStyle("html body.wr_whiteTheme .readerChapterContent {color: #000000;}");
     /* 书架 */
     GM_addStyle("html body.wr_whiteTheme .app_fullHeight {background-color: #b3d1b7;}");
     GM_addStyle("html body.wr_whiteTheme .navBar {background-color: #b3d1b7;}");
