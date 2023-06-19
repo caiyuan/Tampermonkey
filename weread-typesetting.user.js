@@ -29,8 +29,8 @@
 
     /* 阅读 */
     GM_addStyle("html body.wr_whiteTheme {background-color: #b3d1b7;}");
-    GM_addStyle("html body.wr_whiteTheme .readerTopBar {background-color: #aacbaf;}");
-    GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #aacbaf;}");
+    GM_addStyle("html body.wr_whiteTheme .readerTopBar {background-color: #EEEEEE;}");
+    GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #EEEEEE50;}");
     GM_addStyle("html body.wr_whiteTheme .readerHeaderButton {color: #14801d;}");
     GM_addStyle("html body.wr_whiteTheme .readerFooter_button {color: #14801d;}");
     GM_addStyle("html body.wr_whiteTheme .readerChapterContent {color: #000000;}");
