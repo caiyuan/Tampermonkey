@@ -13,7 +13,7 @@
     'use strict';
 
     /* 页宽 */
-    GM_addStyle(".readerContent .readerTopBar {max-width: 1200px;}");
+    GM_addStyle(".readerContent .readerTopBar {max-width: 1200px; height: 45px;}");
     GM_addStyle(".readerContent .app_content {max-width: 1200px;}");
 
     /* 控制 */
@@ -23,6 +23,7 @@
 
     /* 字体 */
     GM_addStyle(".readerContent * {font-family: 'Noto Serif SC','Noto Sans SC';}");
+    GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif;}");
 
 
     /***** 浅色主题 *****/
