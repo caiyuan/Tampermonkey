@@ -22,8 +22,8 @@
     GM_addStyle(".readerContent .readerNotePanel {left: 55%;}");
 
     /* 字体 */
-    GM_addStyle(".readerContent * {font-family: 'Noto Serif SC','Noto Sans SC';}");
-    GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif;}");
+    GM_addStyle(".readerContent * {font-family: 'Noto Serif SC','Noto Sans SC'; font-weight: 500;}");
+    GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
 
 
     /***** 浅色主题 *****/
