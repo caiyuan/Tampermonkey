@@ -24,6 +24,7 @@
     /* 字体 */
     GM_addStyle(".readerContent * {font-family: 'Noto Serif SC','Noto Sans SC'; font-weight: 500;}");
     GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
+    GM_addStyle(".readerContent .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
 
 
     /***** 浅色主题 *****/
