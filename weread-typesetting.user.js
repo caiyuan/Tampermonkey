@@ -22,7 +22,7 @@
     GM_addStyle(".readerContent .readerNotePanel {left: 55%;}");
 
     /* 字体 */
-    GM_addStyle(".readerContent * {font-family: 'OPlusSans3.0-Light','STFangsong','STKaiti'; font-weight: unset;}");
+    GM_addStyle(".readerContent * {font-family: 'OPlusSans3.0-Light'; font-weight: unset;}");
     GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
     GM_addStyle(".readerContent .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
 
