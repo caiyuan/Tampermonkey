@@ -14,9 +14,9 @@
     /* 朗读时能手动翻页 */
 
     GM_addStyle(".book-side-margin {z-index: 900;}");
-    GM_addStyle("#book-selection-bar-overlay > * {z-index: 901;}");
-    GM_addStyle("#book-overlay {z-index: 999;}");
+    GM_addStyle("div[id$='overlay'] {z-index: 901;}");
 
-    GM_addStyle(".speaking {z-index: 990;}");
+    GM_addStyle("#book-read-aloud-overlay {z-index: 899;}");
+    GM_addStyle("#book-read-aloud-overlay .speaking {margin-right: 2rem !important;}");
 
 })();
