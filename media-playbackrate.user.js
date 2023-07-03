@@ -5,7 +5,7 @@
 // @description  倍速播放器
 // @author       Ryan
 // @match        ://*/*
-// @grant        none
+// @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
 
@@ -24,32 +24,32 @@
         visibility: visible !important;
         top: 30%;
         right: 30px;
-        width: 55px;
+        width: 60px;
         margin: 0;
         padding: 0;
         text-align: center;
         cursor: pointer;
-        border-radius: 3px;
-        background-color: rgba(255,255,255,0.1);
+        border-radius: 5px;
+        background-color: rgba(0,0,0,0.3);
         `;
 
     let rateButtionStyle = `
-        margin: 3px;
+        margin: 5px;
         padding: 3px;
         vertical-align: middle;
         font-size: 12px;
         font-family: monospace;
         font-weight: lighter;
-        border-radius: 3px;
-        background-color: rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background-color: rgba(0,0,0,0.3);
         color: rgba(255,255,255,0.3);
         border: solid 1px rgba(255,255,255,0.3);
         `;
 
     let rateButtionHighlight = `
         ${rateButtionStyle};
-        color: rgba(255,255,255,0.9);
-        border: solid 1px rgba(255,255,255,0.9);
+        color: rgba(255,255,255,1);
+        border: solid 1px rgba(255,255,255,1);
         `;
 
     mediaPlaybackRate.innerHTML = `
@@ -174,5 +174,11 @@
             mediaPlaybackRate.style.display = "block";
         }
     }, 3000);
+
+
+    // 浮窗样式微调
+
+    GM_addStyle("#mediaPlaybackRate {opacity: 0.5;}");
+    GM_addStyle("#mediaPlaybackRate:hover {opacity: 1;}");
 
 })();
