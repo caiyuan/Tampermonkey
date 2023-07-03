@@ -17,8 +17,8 @@
     GM_addStyle("div[id$='overlay'] {z-index: 901;}");
 
     GM_addStyle("#book-read-aloud-overlay {z-index: 899;}");
-    GM_addStyle("#book-read-aloud-overlay>div {margin: 2rem !important;}");
-    GM_addStyle("#book-read-aloud-overlay>div {opacity: 0.15 !important;}");
-    GM_addStyle("#book-read-aloud-overlay>div:hover {opacity: 1 !important;}");
+    GM_addStyle("#book-read-aloud-overlay div[id*='bar'] {margin: 2rem !important;}");
+    GM_addStyle("#book-read-aloud-overlay div[id*='bar'] {opacity: 0.15 !important;}");
+    GM_addStyle("#book-read-aloud-overlay div[id*='bar']:hover {opacity: 1 !important;}");
 
 })();
