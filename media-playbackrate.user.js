@@ -30,18 +30,18 @@
         text-align: center;
         cursor: pointer;
         border-radius: 3px;
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(255,255,255,0.1);
         `;
 
     let rateButtionStyle = `
         margin: 3px;
-        padding: 1px 3px;
+        padding: 3px;
         vertical-align: middle;
         font-size: 12px;
-        font-family: serif;
+        font-family: monospace;
         font-weight: lighter;
         border-radius: 3px;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0,0,0,0.1);
         color: rgba(255,255,255,0.3);
         border: solid 1px rgba(255,255,255,0.3);
         `;
