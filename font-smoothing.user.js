@@ -6,13 +6,13 @@
 // @author       Ryan
 // @match        ://*/*
 // @grant        GM_addStyle
-// @run-at       document-end
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    GM_addStyle("html {-webkit-font-smoothing: antialiased;}");
-    GM_addStyle("html {-moz-osx-font-smoothing: grayscale;}");
+    GM_addStyle("* {-webkit-font-smoothing: antialiased;}");
+    GM_addStyle("* {-moz-osx-font-smoothing: grayscale;}");
 
 })();
