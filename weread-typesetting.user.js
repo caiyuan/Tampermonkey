@@ -13,13 +13,13 @@
     'use strict';
 
     /* 页宽 */
-    GM_addStyle(".readerContent .readerTopBar {max-width: 1200px; height: 45px;}");
-    GM_addStyle(".readerContent .app_content {max-width: 1200px;}");
+    GM_addStyle(".readerContent .readerTopBar {max-width: 1400px; height: 45px;}");
+    GM_addStyle(".readerContent .app_content {max-width: 1400px;}");
 
     /* 控制 */
-    GM_addStyle(".readerContent .readerControls {left: 55%;}");
-    GM_addStyle(".readerContent .readerCatalog {left: 55%;}");
-    GM_addStyle(".readerContent .readerNotePanel {left: 55%;}");
+    GM_addStyle(".readerContent .readerControls {left: 60%;}");
+    GM_addStyle(".readerContent .readerCatalog {left: 60%;}");
+    GM_addStyle(".readerContent .readerNotePanel {left: 60%;}");
 
     /* 字体 */
     GM_addStyle(".readerContent * {font-family: 'HarmonyOS Sans SC'; font-weight: unset;}");
