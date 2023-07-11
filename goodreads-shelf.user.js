@@ -2,7 +2,7 @@
 // @name         goodreads-shelf
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  定制 goodreads 书架
+// @description  Goodreads 书架定制
 // @author       Ryan
 // @match        https://www.goodreads.com/shelf/show/*
 // @run-at       document-end
@@ -29,7 +29,6 @@
             i.setAttribute("href","https://search.douban.com/book/subject_search?search_text="+t);
 
         } catch(error){}
-
     });
 
 })();
