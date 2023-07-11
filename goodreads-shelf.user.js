@@ -2,7 +2,7 @@
 // @name         goodreads-shelf
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  滤掉 2010年前 出版书籍
+// @description  定制 goodreads 书架
 // @author       Ryan
 // @match        https://www.goodreads.com/shelf/show/*
 // @run-at       document-end
@@ -13,12 +13,23 @@
 
     document.querySelectorAll(".elementList").forEach(function(e){
         try {
-            var t = e.querySelector(".smallText").textContent.trim();
-            var y = t.substring(t.length-4);
 
-            if(y<2010){e.setAttribute("style","display:none")};
+            // 滤掉2013年前书籍
 
-        } catch(e){}
+            var s = e.querySelector(".smallText").textContent.trim();
+            var y = s.substring(s.length-4);
+            if(y<2013){e.setAttribute("style","display:none")};
+
+
+            // 添加豆瓣快捷搜索
+
+            var i = e.querySelector(".leftAlignedImage");
+            var t = i.getAttribute("title");
+            i.setAttribute("target","_blank");
+            i.setAttribute("href","https://search.douban.com/book/subject_search?search_text="+t);
+
+        } catch(error){}
+
     });
 
 })();
