@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         goodreads-shelf
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  滤掉 2010年 前出版的书籍
+// @description  滤掉 2010年前 出版书籍
 // @author       Ryan
 // @match        https://www.goodreads.com/shelf/show/*
 // @run-at       document-end
