@@ -20,7 +20,7 @@
             var avgRating = ss[2];
             var ratings = ss[4];
             var published = ss[8];
-            if(avgRating<3.5 || ratings<3000 || published<2013){ e.setAttribute("style","display:none"); };
+            if(avgRating<3.7 || ratings<3000 || published<2013){ e.setAttribute("style","display:none"); };
 
 
             // 豆瓣搜索
