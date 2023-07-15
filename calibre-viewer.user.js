@@ -16,9 +16,4 @@
     GM_addStyle("#book-read-aloud-overlay {margin-left: 30px; margin-right: 30px;}");
     GM_addStyle("#book-read-aloud-overlay {width: -webkit-fill-available !important;}");
 
-    GM_addStyle(".book-side-margin {width: 50px !important;}");
-
-    GM_addStyle("#book-read-aloud-overlay>div {opacity: 0.15 !important;}");
-    GM_addStyle("#book-read-aloud-overlay>div:hover {opacity: 1 !important;}");
-
 })();
