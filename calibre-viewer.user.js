@@ -13,12 +13,7 @@
 
     /* 朗读时能手动翻页 */
 
-    GM_addStyle(".book-side-margin {z-index: 900;}");
-    GM_addStyle("div[id$='overlay'] {z-index: 901;}");
-
-    GM_addStyle("#book-read-aloud-overlay {z-index: 899;}");
-    GM_addStyle("#book-read-aloud-overlay div[id*='bar'] {margin: 2rem !important;}");
-    GM_addStyle("#book-read-aloud-overlay div[id*='bar'] {opacity: 0.15 !important;}");
-    GM_addStyle("#book-read-aloud-overlay div[id*='bar']:hover {opacity: 1 !important;}");
+    GM_addStyle("#book-read-aloud-overlay {margin-left: 20px; margin-right: 20px;}");
+    GM_addStyle("#book-read-aloud-overlay {width: -webkit-fill-available !important;}");
 
 })();
