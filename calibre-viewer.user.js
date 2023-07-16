@@ -16,4 +16,21 @@
     GM_addStyle("#book-read-aloud-overlay {margin-left: 30px; margin-right: 30px;}");
     GM_addStyle("#book-read-aloud-overlay {width: -webkit-fill-available !important;}");
 
+
+    /* 仅展示中文语音项 */
+
+    var x = setInterval(function(){
+        var select = document.getElementById("auto-id-8");
+        if (select == null || select.tagName != "SELECT") return;
+        var options = select.options;
+        for (var i = 0; i < options.length; i++) {
+            var text = options[i].text;
+            var value = options[i].value;
+            if(text.indexOf("zh-CN") == -1) {
+                options[i].style.display = "none";
+            }
+        }
+        clearInterval(x);
+    }, 3000);
+
 })();
