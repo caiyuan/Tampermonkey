@@ -21,7 +21,7 @@
 
     var x = setInterval(function(){
         var select = document.getElementById("auto-id-8");
-        if (select == null || select.tagName != "SELECT") return;
+        if (select == null) return;
         var options = select.options;
         for (var i = 0; i < options.length; i++) {
             var text = options[i].text;
