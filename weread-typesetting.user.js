@@ -13,16 +13,16 @@
     'use strict';
 
     /* 页宽 */
-    GM_addStyle(".readerContent .readerTopBar {max-width: 1400px; height: 45px;}");
+    GM_addStyle(".readerContent .readerTopBar {max-width: 1400px; height: 48px;}");
     GM_addStyle(".readerContent .app_content {max-width: 1400px;}");
 
     /* 控制 */
-    GM_addStyle(".readerContent .readerControls {left: 60%;}");
-    GM_addStyle(".readerContent .readerCatalog {left: 60%;}");
-    GM_addStyle(".readerContent .readerNotePanel {left: 60%;}");
+    GM_addStyle(".readerContent .readerControls {margin-left: 748px;}");
+    GM_addStyle(".readerContent .readerCatalog {margin-left: 180px;}");
+    GM_addStyle(".readerContent .readerNotePanel {margin-left: 180px;}");
 
     /* 字体 */
-    GM_addStyle(".readerContent * {font-family: 'HarmonyOS Sans SC'; font-weight: unset;}");
+    GM_addStyle(".readerContent * {font-family: 'HarmonyOS Sans SC';}");
     GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
     GM_addStyle(".readerContent .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
 
