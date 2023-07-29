@@ -14,17 +14,17 @@
 
     // 构建控制器面板
 
-    let mediaPlaybackRate = document.createElement("div");
-    mediaPlaybackRate.setAttribute("id","mediaPlaybackRate");
-    document.body.append(mediaPlaybackRate);
+    let mediaControlPanel = document.createElement("div");
+    mediaControlPanel.setAttribute("id","mediaControlPanel");
+    document.body.append(mediaControlPanel);
 
-    mediaPlaybackRate.style = `
+    mediaControlPanel.style = `
         z-index: 1001 !important;
         position: fixed !important;
         visibility: visible !important;
         top: 30%;
         right: 30px;
-        width: 60px;
+        width: 65px;
         margin: 0;
         padding: 0;
         text-align: center;
@@ -33,7 +33,7 @@
         background-color: rgba(0,0,0,0.3);
         `;
 
-    let rateButtionStyle = `
+    let buttionStyle = `
         margin: 5px;
         padding: 3px;
         vertical-align: middle;
@@ -46,29 +46,34 @@
         border: solid 1px rgba(255,255,255,0.3);
         `;
 
-    let rateButtionHighlight = `
-        ${rateButtionStyle};
+    let buttionHighlight = `
+        ${buttionStyle};
         color: rgba(255,255,255,1);
         border: solid 1px rgba(255,255,255,1);
         `;
 
-    mediaPlaybackRate.innerHTML = `
-        <div volume="0" style="${rateButtionStyle}">Sound</div>
-        <div id="rate-display" rate="1" style="${rateButtionStyle}">Speed</div>
+    mediaControlPanel.innerHTML = `
+        <div>
+            <div id="volume-increase" volume="1" style="${buttionStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0 3px 0;">+</div>
+            <div id="volume-decrease" volume="0" style="${buttionStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0 3px 0;">-</div>
+        </div>
+        <div style="clear: both;"></div>
 
-        <div class="rate-fast" rate="3" style="${rateButtionStyle}">3x</div>
-        <div class="rate-fast" rate="5" style="${rateButtionStyle}">5x</div>
-        <div class="rate-fast" rate="7" style="${rateButtionStyle}">7x</div>
+        <div id="rate-switch" rate="1" style="${buttionStyle}">Speed</div>
 
-        <div class="rate-slow" rate="1.3" style="${rateButtionStyle}">1.3x</div>
-        <div class="rate-slow" rate="1.5" style="${rateButtionStyle}">1.5x</div>
-        <div class="rate-slow" rate="1.7" style="${rateButtionStyle}">1.7x</div>
+        <div class="rate-fast" rate="3" style="${buttionStyle}">3x</div>
+        <div class="rate-fast" rate="5" style="${buttionStyle}">5x</div>
+        <div class="rate-fast" rate="7" style="${buttionStyle}">7x</div>
+
+        <div class="rate-slow" rate="1.3" style="${buttionStyle}">1.3x</div>
+        <div class="rate-slow" rate="1.5" style="${buttionStyle}">1.5x</div>
+        <div class="rate-slow" rate="1.7" style="${buttionStyle}">1.7x</div>
         `;
 
-    // 控制器切换功能
+    // 播放器倍速切换
 
-    let rateDisplay = mediaPlaybackRate.querySelector("#rate-display");
-    rateDisplay.addEventListener("dblclick", function(event){
+    let rateSwitch = mediaControlPanel.querySelector("#rate-switch");
+    rateSwitch.addEventListener("dblclick", function(event){
         let displayMaps = [
             {class: ".rate-fast", display: "none"},
             {class: ".rate-slow", display: "block"}
@@ -86,18 +91,18 @@
         window.displayMaps = displayMaps;
 
         window.displayMaps.forEach(i => {
-            mediaPlaybackRate.querySelectorAll(i.class).forEach(rateButtion => {
-                rateButtion.style.display = i.display;
+            mediaControlPanel.querySelectorAll(i.class).forEach(control => {
+                control.style.display = i.display;
             });
         });
     });
-    rateDisplay.dispatchEvent(new MouseEvent("dblclick"));
+    rateSwitch.dispatchEvent(new MouseEvent("dblclick"));
 
     // 控制器功能实现
 
-    let rateButtionList = mediaPlaybackRate.querySelectorAll("div");
-    rateButtionList.forEach(rateButtion => {
-        rateButtion.addEventListener("click", function(event){
+    let mediaControl = mediaControlPanel.querySelectorAll("div");
+    mediaControl.forEach(control => {
+        control.addEventListener("click", function(event){
             let target = event.target;
 
             let rate = target.getAttribute("rate");
@@ -107,13 +112,17 @@
             if(volume !== null) volumeChange(parseFloat(volume));
         });
 
-        rateButtion.addEventListener("mousemove", function(event){
-            let btn = event.target;
-            btn.style = rateButtionHighlight;
+        control.addEventListener("mousemove", function(event){
+            let target = event.target;
+
+            let rate = target.getAttribute("rate");
+            if(rate !== null) target.style = buttionHighlight;
         });
-        rateButtion.addEventListener("mouseout", function(event){
-            let btn = event.target;
-            btn.style = rateButtionStyle;
+        control.addEventListener("mouseout", function(event){
+            let target = event.target;
+
+            let rate = target.getAttribute("rate");
+            if(rate !== null) target.style = buttionStyle;
         });
     });
 
@@ -165,20 +174,20 @@
 
     // 控制器是否显示
 
-    mediaPlaybackRate.style.display = "none";
+    mediaControlPanel.style.display = "none";
     setInterval(function(){
         var mediaList = mediaSelector();
         if (mediaList.length == 0) {
-            mediaPlaybackRate.style.display = "none";
+            mediaControlPanel.style.display = "none";
         } else {
-            mediaPlaybackRate.style.display = "block";
+            mediaControlPanel.style.display = "block";
         }
     }, 3000);
 
 
     // 浮窗样式微调
 
-    GM_addStyle("#mediaPlaybackRate {opacity: 0.5;}");
-    GM_addStyle("#mediaPlaybackRate:hover {opacity: 1;}");
+    GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
+    GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
 
 })();
