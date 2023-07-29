@@ -150,17 +150,16 @@
         });
     }
 
-    function volumeChange(volume) {
+    function volumeChange(signal) {
         var mediaList = mediaSelector();
         mediaList.forEach(media => {
-            if (volume != 0) {
-                media.volume = volume;
+            if (signal == 1) {
+                let v = media.volume + 0.1;
+                media.volume = (v > 1 ? 1 : v);
             }
-            else if (media.volume > 1 || media.volume <= 0) {
-                media.volume = 1;
-            } else {
-                let v = media.volume - 0.15;
-                media.volume = v < 0 ? 0 : v;
+            if (signal == 0) {
+                let v = media.volume - 0.1;
+                media.volume = (v < 0 ? 0 : v);
             }
             media.play();
 
@@ -185,7 +184,7 @@
     }, 3000);
 
 
-    // 浮窗样式微调
+    // 控制器浮窗微调
 
     GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
     GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
