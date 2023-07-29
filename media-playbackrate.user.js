@@ -46,12 +46,6 @@
         border: solid 1px rgba(255,255,255,0.3);
         `;
 
-    let buttionHighlight = `
-        ${buttionStyle};
-        color: rgba(255,255,255,1);
-        border: solid 1px rgba(255,255,255,1);
-        `;
-
     mediaControlPanel.innerHTML = `
         <div>
             <div id="volume-increase" volume="1" style="${buttionStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0 3px 0;">+</div>
@@ -110,19 +104,6 @@
 
             let volume = target.getAttribute("volume");
             if(volume !== null) volumeChange(parseFloat(volume));
-        });
-
-        control.addEventListener("mousemove", function(event){
-            let target = event.target;
-
-            let rate = target.getAttribute("rate");
-            if(rate !== null) target.style = buttionHighlight;
-        });
-        control.addEventListener("mouseout", function(event){
-            let target = event.target;
-
-            let rate = target.getAttribute("rate");
-            if(rate !== null) target.style = buttionStyle;
         });
     });
 
@@ -188,5 +169,11 @@
 
     GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
     GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
+
+    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {color: rgba(255,255,255,1) !important}");
+    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {border: solid 1px rgba(255,255,255,1) !important}");
+
+    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {color: rgba(255,255,255,1) !important}");
+    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {border: solid 1px rgba(255,255,255,1) !important}");
 
 })();
