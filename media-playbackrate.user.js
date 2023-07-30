@@ -66,17 +66,17 @@
 
     // 播放器倍速轮换
 
-    const displayMaps = {
+    const rateDisplayMaps = {
         ".rate-fast": "block",
         ".rate-slow": "none"
     };
 
     const rateSwitch = mediaControlPanel.querySelector("#rate-switch");
     rateSwitch.addEventListener("dblclick", function(event) {
-        Object.entries(displayMaps).forEach(([selector, display]) => {
-            displayMaps[selector] = display === "block" ? "none" : "block";
+        Object.entries(rateDisplayMaps).forEach(([selector, display]) => {
+            rateDisplayMaps[selector] = display === "block" ? "none" : "block";
         });
-        Object.entries(displayMaps).forEach(([selector, display]) => {
+        Object.entries(rateDisplayMaps).forEach(([selector, display]) => {
             mediaControlPanel.querySelectorAll(selector).forEach(control => {
                 control.style.display = display;
             });
@@ -87,27 +87,27 @@
 
     // 控制器功能实现
 
-    const mediaControl = mediaControlPanel.querySelectorAll("div");
-    mediaControl.forEach(control => {
+    const mediaControls = mediaControlPanel.querySelectorAll("div");
+    mediaControls.forEach(control => {
         control.addEventListener("click", function(event) {
             const { rate, volume } = event.target.dataset;
             if (rate) {
-                playbackRate(parseFloat(rate));
+                setPlaybackRate(parseFloat(rate));
             }
             if (volume) {
-                volumeChange(parseFloat(volume));
+                setVolume(parseFloat(volume));
             }
         });
     });
 
     function mediaSelector() {
-        const elements = new Set([
+        const mediaElements = new Set([
             ...document.querySelectorAll("video, audio")
         ]);
-        return elements.size ? [...elements] : [];
+        return mediaElements.size ? [...mediaElements] : [];
     }
 
-    function playbackRate(rate) {
+    function setPlaybackRate(rate) {
         const mediaElements = mediaSelector();
 
         for (const media of mediaElements) {
@@ -118,7 +118,7 @@
         }
     }
 
-    function volumeChange(signal) {
+    function setVolume(signal) {
         const mediaElements = mediaSelector();
 
         for (const media of mediaElements) {
@@ -139,13 +139,13 @@
     }
 
     function optimizeMedia(media) {
-        media.setAttribute("preload","auto");
+        media.setAttribute("preload", "auto");
     }
 
     // 控制器是否显示
 
     mediaControlPanel.style.display = "none";
-    setInterval(function(){
+    setInterval(function() {
         const mediaElements = mediaSelector();
         mediaControlPanel.style.display = mediaElements.length ? "block" : "none";
     }, 3000);
