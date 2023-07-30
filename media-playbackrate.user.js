@@ -176,4 +176,35 @@
     GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {color: rgba(255,255,255,1) !important}");
     GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {border: solid 1px rgba(255,255,255,1) !important}");
 
+
+    // 音视频音量增益
+
+    class AudioController {
+        static audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        static gainNode = AudioController.audioContext.createGain();
+        static instance = new AudioController();
+        mediaElements = new Set();
+
+        connect(mediaElement) {
+            if (this.mediaElements.has(mediaElement)) {
+                return AudioController.instance;
+            }
+
+            this.mediaElements.add(mediaElement);
+            const sourceNode = AudioController.audioContext.createMediaElementSource(mediaElement);
+            sourceNode.connect(AudioController.gainNode).connect(AudioController.audioContext.destination);
+            return AudioController.instance;
+        }
+
+        setVolume(volumeLevel) {
+            const validVolumeLevel = Math.max(0, Math.min(3, volumeLevel));
+            AudioController.gainNode.gain.value = validVolumeLevel;
+            return AudioController.instance;
+        }
+    }
+
+    const videoElement = document.querySelector('video');
+    AudioController.instance.connect(videoElement);
+    AudioController.instance.setVolume(2);
+
 })();
