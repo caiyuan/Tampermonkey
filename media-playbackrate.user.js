@@ -174,11 +174,27 @@
             AudioController.gainNode.gain.value = validVolumeLevel;
             return AudioController.instance;
         }
+
+        static async loadVideo(video, volumeLevel) {
+            try {
+                const response = await fetch(video.src);
+                if (response.ok) {
+                    const videoBlob = await response.blob();
+                    const videoURL = window.URL.createObjectURL(videoBlob);
+                    video.src = videoURL;
+
+                    AudioController.instance.connect(video).setVolume(volumeLevel);
+                } else {
+                    throw new Error(`Failed to load video: ${response.status} ${response.statusText}`);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
     }
 
-    const videoElement = document.querySelector('video');
-    AudioController.instance.connect(videoElement);
-    AudioController.instance.setVolume(3);
+    const video = document.querySelector('video');
+    AudioController.loadVideo(video, 3);
 
 
     // 控制器浮窗微调
