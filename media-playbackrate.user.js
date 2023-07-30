@@ -45,9 +45,10 @@
     `;
 
     mediaControlPanel.innerHTML = `
+      <div id="volume-gain" data-gain="3" style="${buttonStyle}">Volume</div>
       <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
       </div>
       <div style="clear: both;"></div>
 
@@ -90,12 +91,15 @@
     const mediaControls = mediaControlPanel.querySelectorAll("div");
     mediaControls.forEach(control => {
         control.addEventListener("click", function(event) {
-            const { rate, volume } = event.target.dataset;
+            const { rate, volume, gain } = event.target.dataset;
             if (rate) {
                 setPlaybackRate(parseFloat(rate));
             }
             if (volume) {
                 setVolume(parseFloat(volume));
+            }
+            if (gain) {
+                setGain(parseFloat(gain));
             }
         });
     });
@@ -138,6 +142,16 @@
         }
     }
 
+    function setGain(volumeLevel) {
+        const mediaElements = mediaSelector();
+
+        for (const media of mediaElements) {
+            AudioController.instance.connect(media).setVolumeLevel(volumeLevel);
+
+            // AudioController.loadVideo(media, volumeLevel);
+        }
+    }
+
     function optimizeMedia(media) {
         media.setAttribute("preload", "auto");
     }
@@ -169,32 +183,25 @@
             return AudioController.instance;
         }
 
-        setVolume(volumeLevel) {
+        setVolumeLevel(volumeLevel) {
             const validVolumeLevel = Math.max(0, Math.min(6, volumeLevel));
             AudioController.gainNode.gain.value = validVolumeLevel;
             return AudioController.instance;
         }
 
         static async loadVideo(video, volumeLevel) {
-            try {
-                const response = await fetch(video.src);
-                if (response.ok) {
-                    const videoBlob = await response.blob();
-                    const videoURL = window.URL.createObjectURL(videoBlob);
-                    video.src = videoURL;
+            const response = await fetch(video.src);
+            if (response.ok) {
+                const videoBlob = await response.blob();
+                const videoURL = window.URL.createObjectURL(videoBlob);
+                video.src = videoURL;
 
-                    AudioController.instance.connect(video).setVolume(volumeLevel);
-                } else {
-                    throw new Error(`Failed to load video: ${response.status} ${response.statusText}`);
-                }
-            } catch (error) {
-                console.error(error);
+                AudioController.instance.connect(video).setVolumeLevel(volumeLevel);
+            } else {
+                throw new Error(`Failed to load video: ${response.status} ${response.statusText}`);
             }
         }
     }
-
-    const video = document.querySelector('video');
-    AudioController.loadVideo(video, 3);
 
 
     // 控制器浮窗微调
