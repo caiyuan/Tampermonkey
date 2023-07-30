@@ -45,7 +45,7 @@
     `;
 
     mediaControlPanel.innerHTML = `
-      <div id="volume-gain" data-gain="3" style="${buttonStyle}">Volume</div>
+      <div id="volume-gain" data-gain="6" style="${buttonStyle}">Volume</div>
       <div>
         <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
         <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
@@ -146,10 +146,10 @@
         const mediaElements = mediaSelector();
 
         for (const media of mediaElements) {
-            try {
-                AudioController.instance.loadVideo(media, volumeLevel);
-            } catch (error) {
+            if (media.src.startsWith('blob:')) {
                 AudioController.instance.connect(media).setVolumeLevel(volumeLevel);
+            } else {
+                AudioController.instance.loadVideo(media, volumeLevel);
             }
         }
     }
@@ -192,7 +192,7 @@
         }
 
         async loadVideo(video, volumeLevel) {
-            const response = await fetch(video.src);
+            const response = await fetch(video.src, { method: 'GET' });
             if (response.ok) {
                 const videoBlob = await response.blob();
                 const videoURL = window.URL.createObjectURL(videoBlob);
