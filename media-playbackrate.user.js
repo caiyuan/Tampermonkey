@@ -145,11 +145,14 @@
     function setGain(volumeLevel) {
         const mediaElements = mediaSelector();
 
+        const audioController = AudioController.instance;
+        const isBlob = media => media.src.startsWith('blob:');
+
         for (const media of mediaElements) {
-            if (media.src.startsWith('blob:')) {
-                AudioController.instance.connect(media).setVolumeLevel(volumeLevel);
+            if (isBlob(media)) {
+                audioController.connect(media).setVolumeLevel(volumeLevel);
             } else {
-                AudioController.instance.loadVideo(media, volumeLevel);
+                // audioController.loadVideo(media, volumeLevel);
             }
         }
     }
