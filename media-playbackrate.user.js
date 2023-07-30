@@ -14,55 +14,55 @@
 
     // 构建控制器面板
 
-    let mediaControlPanel = document.createElement("div");
-    mediaControlPanel.setAttribute("id","mediaControlPanel");
-    document.body.append(mediaControlPanel);
+    const mediaControlPanel = document.createElement("div");
+    mediaControlPanel.id = "mediaControlPanel";
+    mediaControlPanel.style.cssText = `
+      z-index: 1001 !important;
+      position: fixed !important;
+      visibility: visible !important;
+      top: 30%;
+      right: 30px;
+      width: 65px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+    `;
 
-    mediaControlPanel.style = `
-        z-index: 1001 !important;
-        position: fixed !important;
-        visibility: visible !important;
-        top: 30%;
-        right: 30px;
-        width: 65px;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        cursor: pointer;
-        border-radius: 5px;
-        background-color: rgba(0,0,0,0.3);
-        `;
-
-    let buttionStyle = `
-        margin: 5px;
-        padding: 3px;
-        vertical-align: middle;
-        font-size: 12px;
-        font-family: monospace;
-        font-weight: lighter;
-        border-radius: 5px;
-        background-color: rgba(0,0,0,0.3);
-        color: rgba(255,255,255,0.3);
-        border: solid 1px rgba(255,255,255,0.3);
-        `;
+    const buttonStyle = `
+      margin: 5px;
+      padding: 3px;
+      vertical-align: middle;
+      font-size: 12px;
+      font-family: monospace;
+      font-weight: lighter;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: rgba(255, 255, 255, 0.3);
+      border: solid 1px rgba(255, 255, 255, 0.3);
+    `;
 
     mediaControlPanel.innerHTML = `
-        <div>
-            <div id="volume-increase" volume="1" style="${buttionStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0 3px 0;">+</div>
-            <div id="volume-decrease" volume="0" style="${buttionStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0 3px 0;">-</div>
-        </div>
-        <div style="clear: both;"></div>
+      <div>
+        <div id="volume-increase" volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0;">-</div>
+      </div>
+      <div style="clear: both;"></div>
 
-        <div id="rate-switch" rate="1" style="${buttionStyle}">Speed</div>
+      <div id="rate-switch" rate="1" style="${buttonStyle}">Speed</div>
 
-        <div class="rate-fast" rate="3" style="${buttionStyle}">3x</div>
-        <div class="rate-fast" rate="5" style="${buttionStyle}">5x</div>
-        <div class="rate-fast" rate="7" style="${buttionStyle}">7x</div>
+      <div class="rate-fast" rate="3" style="${buttonStyle}">3x</div>
+      <div class="rate-fast" rate="5" style="${buttonStyle}">5x</div>
+      <div class="rate-fast" rate="7" style="${buttonStyle}">7x</div>
 
-        <div class="rate-slow" rate="1.3" style="${buttionStyle}">1.3x</div>
-        <div class="rate-slow" rate="1.5" style="${buttionStyle}">1.5x</div>
-        <div class="rate-slow" rate="1.7" style="${buttionStyle}">1.7x</div>
-        `;
+      <div class="rate-slow" rate="1.3" style="${buttonStyle}">1.3x</div>
+      <div class="rate-slow" rate="1.5" style="${buttonStyle}">1.5x</div>
+      <div class="rate-slow" rate="1.7" style="${buttonStyle}">1.7x</div>
+    `;
+
+    document.body.appendChild(mediaControlPanel);
 
     // 播放器倍速切换
 
