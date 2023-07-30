@@ -146,9 +146,11 @@
         const mediaElements = mediaSelector();
 
         for (const media of mediaElements) {
-            AudioController.instance.connect(media).setVolumeLevel(volumeLevel);
-
-            // AudioController.loadVideo(media, volumeLevel);
+            try {
+                AudioController.instance.loadVideo(media, volumeLevel);
+            } catch (error) {
+                AudioController.instance.connect(media).setVolumeLevel(volumeLevel);
+            }
         }
     }
 
@@ -189,7 +191,7 @@
             return AudioController.instance;
         }
 
-        static async loadVideo(video, volumeLevel) {
+        async loadVideo(video, volumeLevel) {
             const response = await fetch(video.src);
             if (response.ok) {
                 const videoBlob = await response.blob();
