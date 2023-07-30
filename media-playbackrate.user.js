@@ -66,30 +66,28 @@
 
     // 播放器倍速切换
 
-    let rateSwitch = mediaControlPanel.querySelector("#rate-switch");
-    rateSwitch.addEventListener("dblclick", function(event){
-        let displayMaps = [
-            {class: ".rate-fast", display: "none"},
-            {class: ".rate-slow", display: "block"}
-        ];
-        if (window.displayMaps != undefined) {
-            displayMaps = window.displayMaps;
-            displayMaps.forEach(i => {
-                if (i.display != "block") {
-                    i.display = "block";
-                } else {
-                    i.display = "none";
-                }
-            });
-        }
-        window.displayMaps = displayMaps;
+    const displayMaps = [
+        {".rate-fast": "block"},
+        {".rate-slow": "none"}
+    ];
 
-        window.displayMaps.forEach(i => {
-            mediaControlPanel.querySelectorAll(i.class).forEach(control => {
-                control.style.display = i.display;
+    const rateSwitch = mediaControlPanel.querySelector("#rate-switch");
+    rateSwitch.addEventListener("dblclick", function(event) {
+        window.displayMaps = window.displayMaps || displayMaps;
+        window.displayMaps.forEach(map => {
+            Object.entries(map).forEach(([selector, display]) => {
+                map[selector] = display === "block" ? "none" : "block";
+            });
+        });
+        window.displayMaps.forEach(map => {
+            Object.entries(map).forEach(([selector, display]) => {
+                mediaControlPanel.querySelectorAll(selector).forEach(control => {
+                    control.style.display = display;
+                });
             });
         });
     });
+
     rateSwitch.dispatchEvent(new MouseEvent("dblclick"));
 
     // 控制器功能实现
