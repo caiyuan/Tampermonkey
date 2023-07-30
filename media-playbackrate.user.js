@@ -162,19 +162,6 @@
         }
     }, 3000);
 
-
-    // 控制器浮窗微调
-
-    GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
-    GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
-
-    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {color: rgba(255,255,255,1) !important}");
-    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {border: solid 1px rgba(255,255,255,1) !important}");
-
-    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {color: rgba(255,255,255,1) !important}");
-    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {border: solid 1px rgba(255,255,255,1) !important}");
-
-
     // 音视频音量增益
 
     class AudioController {
@@ -195,7 +182,7 @@
         }
 
         setVolume(volumeLevel) {
-            const validVolumeLevel = Math.max(0, Math.min(3, volumeLevel));
+            const validVolumeLevel = Math.max(0, Math.min(6, volumeLevel));
             AudioController.gainNode.gain.value = validVolumeLevel;
             return AudioController.instance;
         }
@@ -203,6 +190,18 @@
 
     const videoElement = document.querySelector('video');
     AudioController.instance.connect(videoElement);
-    AudioController.instance.setVolume(2);
+    AudioController.instance.setVolume(3);
+
+
+    // 控制器浮窗微调
+
+    GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
+    GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
+
+    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {color: rgba(255,255,255,1) !important}");
+    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {border: solid 1px rgba(255,255,255,1) !important}");
+
+    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {color: rgba(255,255,255,1) !important}");
+    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {border: solid 1px rgba(255,255,255,1) !important}");
 
 })();
