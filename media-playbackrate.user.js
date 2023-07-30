@@ -92,22 +92,22 @@
 
     // 控制器功能实现
 
-    let mediaControl = mediaControlPanel.querySelectorAll("div");
+    const mediaControl = mediaControlPanel.querySelectorAll("div");
     mediaControl.forEach(control => {
         control.addEventListener("click", function(event){
-            let target = event.target;
+            const target = event.target;
 
-            let rate = target.getAttribute("rate");
+            const rate = target.getAttribute("rate");
             if(rate !== null) playbackRate(parseFloat(rate));
 
-            let volume = target.getAttribute("volume");
+            const volume = target.getAttribute("volume");
             if(volume !== null) volumeChange(parseFloat(volume));
         });
     });
 
     function mediaSelector(){
-        var videoList = document.querySelectorAll("video");
-        var audioList = document.querySelectorAll("audio");
+        const videoList = document.querySelectorAll("video");
+        const audioList = document.querySelectorAll("audio");
 
         if(videoList.length != 0) {
             return videoList;
@@ -119,7 +119,7 @@
     }
 
     function playbackRate(rate) {
-        var mediaList = mediaSelector();
+        const mediaList = mediaSelector();
 
         mediaList.forEach(media => {
             media.playbackRate = rate;
@@ -130,14 +130,14 @@
     }
 
     function volumeChange(signal) {
-        var mediaList = mediaSelector();
+        const mediaList = mediaSelector();
         mediaList.forEach(media => {
             if (signal == 1) {
-                let v = media.volume + 0.1;
+                const v = media.volume + 0.1;
                 media.volume = (v > 1 ? 1 : v);
             }
             if (signal == 0) {
-                let v = media.volume - 0.1;
+                const v = media.volume - 0.1;
                 media.volume = (v < 0 ? 0 : v);
             }
             media.play();
@@ -154,7 +154,7 @@
 
     mediaControlPanel.style.display = "none";
     setInterval(function(){
-        var mediaList = mediaSelector();
+        const mediaList = mediaSelector();
         if (mediaList.length == 0) {
             mediaControlPanel.style.display = "none";
         } else {
