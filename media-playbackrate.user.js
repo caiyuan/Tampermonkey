@@ -64,26 +64,21 @@
 
     document.body.appendChild(mediaControlPanel);
 
-    // 播放器倍速切换
+    // 播放器倍速轮换
 
-    const displayMaps = [
-        {".rate-fast": "block"},
-        {".rate-slow": "none"}
-    ];
+    const displayMaps = {
+        ".rate-fast": "block",
+        ".rate-slow": "none"
+    };
 
     const rateSwitch = mediaControlPanel.querySelector("#rate-switch");
     rateSwitch.addEventListener("dblclick", function(event) {
-        window.displayMaps = window.displayMaps || displayMaps;
-        window.displayMaps.forEach(map => {
-            Object.entries(map).forEach(([selector, display]) => {
-                map[selector] = display === "block" ? "none" : "block";
-            });
+        Object.entries(displayMaps).forEach(([selector, display]) => {
+            displayMaps[selector] = display === "block" ? "none" : "block";
         });
-        window.displayMaps.forEach(map => {
-            Object.entries(map).forEach(([selector, display]) => {
-                mediaControlPanel.querySelectorAll(selector).forEach(control => {
-                    control.style.display = display;
-                });
+        Object.entries(displayMaps).forEach(([selector, display]) => {
+            mediaControlPanel.querySelectorAll(selector).forEach(control => {
+                control.style.display = display;
             });
         });
     });
@@ -105,48 +100,45 @@
         });
     });
 
-    function mediaSelector(){
-        const videoList = document.querySelectorAll("video");
-        const audioList = document.querySelectorAll("audio");
-
-        if(videoList.length != 0) {
-            return videoList;
-        }
-        if(audioList.length != 0) {
-            return audioList;
-        }
-        return [];
+    function mediaSelector() {
+        const elements = new Set([
+            ...document.querySelectorAll("video, audio")
+        ]);
+        return elements.size ? [...elements] : [];
     }
 
     function playbackRate(rate) {
-        const mediaList = mediaSelector();
+        const mediaElements = mediaSelector();
 
-        mediaList.forEach(media => {
+        for (const media of mediaElements) {
             media.playbackRate = rate;
             media.play();
 
-            optMedia(media);
-        });
+            optimizeMedia(media);
+        }
     }
 
     function volumeChange(signal) {
-        const mediaList = mediaSelector();
-        mediaList.forEach(media => {
+        const mediaElements = mediaSelector();
+
+        for (const media of mediaElements) {
+            let volume = media.volume;
             if (signal == 1) {
-                const v = media.volume + 0.1;
-                media.volume = (v > 1 ? 1 : v);
+                volume += 0.1;
+                volume = Math.min(1, volume);
             }
             if (signal == 0) {
-                const v = media.volume - 0.1;
-                media.volume = (v < 0 ? 0 : v);
+                volume -= 0.1;
+                volume = Math.max(0, volume);
             }
+            media.volume = volume;
             media.play();
 
-            optMedia(media);
-        });
+            optimizeMedia(media);
+        }
     }
 
-    function optMedia(media) {
+    function optimizeMedia(media) {
         media.setAttribute("preload","auto");
     }
 
@@ -154,12 +146,8 @@
 
     mediaControlPanel.style.display = "none";
     setInterval(function(){
-        const mediaList = mediaSelector();
-        if (mediaList.length == 0) {
-            mediaControlPanel.style.display = "none";
-        } else {
-            mediaControlPanel.style.display = "block";
-        }
+        const mediaElements = mediaSelector();
+        mediaControlPanel.style.display = mediaElements.length ? "block" : "none";
     }, 3000);
 
     // 音视频音量增益
