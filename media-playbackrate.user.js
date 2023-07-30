@@ -6,7 +6,7 @@
 // @author       Ryan
 // @match        ://*/*
 // @grant        GM_addStyle
-// @run-at       document-end
+// @run-at       document-idle
 // ==/UserScript==
 
 (function() {
