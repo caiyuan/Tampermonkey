@@ -46,20 +46,20 @@
 
     mediaControlPanel.innerHTML = `
       <div>
-        <div id="volume-increase" volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 5px 0 0 5px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 5px 5px 0 0; padding: 3px 0;">-</div>
       </div>
       <div style="clear: both;"></div>
 
-      <div id="rate-switch" rate="1" style="${buttonStyle}">Speed</div>
+      <div id="rate-switch" data-rate="1" style="${buttonStyle}">Speed</div>
 
-      <div class="rate-fast" rate="3" style="${buttonStyle}">3x</div>
-      <div class="rate-fast" rate="5" style="${buttonStyle}">5x</div>
-      <div class="rate-fast" rate="7" style="${buttonStyle}">7x</div>
+      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
+      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
+      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7x</div>
 
-      <div class="rate-slow" rate="1.3" style="${buttonStyle}">1.3x</div>
-      <div class="rate-slow" rate="1.5" style="${buttonStyle}">1.5x</div>
-      <div class="rate-slow" rate="1.7" style="${buttonStyle}">1.7x</div>
+      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3x</div>
+      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5x</div>
+      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7x</div>
     `;
 
     document.body.appendChild(mediaControlPanel);
@@ -94,14 +94,14 @@
 
     const mediaControl = mediaControlPanel.querySelectorAll("div");
     mediaControl.forEach(control => {
-        control.addEventListener("click", function(event){
-            const target = event.target;
-
-            const rate = target.getAttribute("rate");
-            if(rate !== null) playbackRate(parseFloat(rate));
-
-            const volume = target.getAttribute("volume");
-            if(volume !== null) volumeChange(parseFloat(volume));
+        control.addEventListener("click", function(event) {
+            const { rate, volume } = event.target.dataset;
+            if (rate) {
+                playbackRate(parseFloat(rate));
+            }
+            if (volume) {
+                volumeChange(parseFloat(volume));
+            }
         });
     });
 
