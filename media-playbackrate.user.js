@@ -25,6 +25,7 @@
       width: 65px;
       margin: 0;
       padding: 0;
+      line-height: normal;
       text-align: center;
       cursor: pointer;
       border-radius: 5px;
