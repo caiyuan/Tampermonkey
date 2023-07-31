@@ -152,7 +152,7 @@
             if (isBlob(media)) {
                 audioController.connect(media).setVolumeLevel(volumeLevel);
             } else {
-                // audioController.loadVideo(media, volumeLevel);
+                audioController.loadVideo(media, volumeLevel);
             }
         }
     }
@@ -195,16 +195,15 @@
         }
 
         async loadVideo(video, volumeLevel) {
-            const response = await fetch(video.src, { method: 'GET' });
-            if (response.ok) {
-                const videoBlob = await response.blob();
-                const videoURL = window.URL.createObjectURL(videoBlob);
-                video.src = videoURL;
-
-                AudioController.instance.connect(video).setVolumeLevel(volumeLevel);
-            } else {
+            const src = video.currentSrc || video.src;
+            const response = await fetch(src);
+            if (!response.ok) {
                 throw new Error(`Failed to load video: ${response.status} ${response.statusText}`);
             }
+            const videoBlob = await response.blob();
+            const videoURL = URL.createObjectURL(videoBlob);
+            video.src = videoURL;
+            AudioController.instance.connect(video).setVolumeLevel(volumeLevel);
         }
     }
 
