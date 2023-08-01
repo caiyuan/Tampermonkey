@@ -28,7 +28,7 @@
       line-height: normal;
       text-align: center;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
     `;
 
@@ -39,7 +39,7 @@
       font-size: 12px;
       font-family: monospace;
       font-weight: lighter;
-      border-radius: 5px;
+      border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
       color: rgba(255, 255, 255, 0.3);
       border: solid 1px rgba(255, 255, 255, 0.3);
@@ -48,8 +48,8 @@
     mediaControlPanel.innerHTML = `
       <div id="volume-gain" data-gain="3" style="${buttonStyle}">Volume</div>
       <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 5px 0 0 5px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 5px 5px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 3px 0 0 3px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 3px 3px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
       </div>
       <div style="clear: both;"></div>
 
