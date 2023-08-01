@@ -6,7 +6,7 @@
 // @author       Ryan
 // @match        ://*/*
 // @grant        GM_addStyle
-// @run-at       document-idle
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
@@ -25,20 +25,19 @@
       width: 65px;
       margin: 0;
       padding: 0;
-      line-height: normal;
-      text-align: center;
-      cursor: pointer;
       border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
+      line-height: normal;
+      text-align: center;
+      font-size: 12px;
+      font-family: ui-monospace;
+      font-weight: normal;
+      cursor: pointer;
     `;
 
     const buttonStyle = `
       margin: 5px;
       padding: 3px;
-      vertical-align: middle;
-      font-size: 12px;
-      font-family: monospace;
-      font-weight: lighter;
       border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
       color: rgba(255, 255, 255, 0.3);
@@ -55,13 +54,13 @@
 
       <div id="rate-switch" data-rate="1" style="${buttonStyle}">Speed</div>
 
-      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
-      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
-      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7x</div>
+      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3X</div>
+      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5X</div>
+      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7X</div>
 
-      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3x</div>
-      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5x</div>
-      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7x</div>
+      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3X</div>
+      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5X</div>
+      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7X</div>
     `;
 
     document.body.appendChild(mediaControlPanel);
