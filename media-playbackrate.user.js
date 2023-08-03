@@ -26,7 +26,7 @@
       margin: 0;
       padding: 0;
       border-radius: 3px;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(100, 100, 100, 0.3);
       line-height: normal;
       text-align: center;
       font-size: 12px;
@@ -210,7 +210,7 @@
 
     // 控制器浮窗微调
 
-    GM_addStyle("#mediaControlPanel {opacity: 0.5;}");
+    GM_addStyle("#mediaControlPanel {opacity: 0.3;}");
     GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
 
     GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {color: rgba(255,255,255,1) !important}");
