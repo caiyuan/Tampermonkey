@@ -26,7 +26,7 @@
       margin: 0;
       padding: 0;
       border-radius: 3px;
-      background-color: rgba(100, 100, 100, 0.3);
+      background-color: rgba(150, 150, 150, 0.3);
       line-height: normal;
       text-align: center;
       font-size: 12px;
