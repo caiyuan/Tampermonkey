@@ -19,26 +19,19 @@
 
     /* 仅展示中文语音项 */
 
-    var lang = "zh-CN";
+    const lang = "zh-CN";
 
-    function x(lang) {
-        var select = document.querySelector('select[id^="auto-id-"]');
-        var options = select.options;
-        for (var i = 0; i < options.length; i++) {
-            var text = options[i].text;
-            var value = options[i].value;
-            if(text.indexOf(lang) == -1) {
-                options[i].style.display = "none";
-            } else {
-                options[i].style.display = "display";
-            }
+    function filterOptions() {
+        const select = document.querySelector('select[id^="auto-id-"]');
+        if (!select) return;
+
+        const options = select.options;
+        for (let i = 0, len = options.length; i < len; i++) {
+            const isLangMatched = options[i].text.includes(lang);
+            options[i].style.display = isLangMatched ? "block" : "none";
         }
     }
 
-    setInterval(function(){
-        try {
-            x(lang);
-        } catch (error) {}
-    }, 3000);
+    setInterval(filterOptions, 3000);
 
 })();
