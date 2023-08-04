@@ -2,7 +2,7 @@
 // @name         douban-imdb
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  豆瓣电影评分扩展
+// @description  豆瓣电影 imdb 扩展
 // @author       Ryan
 // @match        https://movie.douban.com/subject/*
 // @grant        none
