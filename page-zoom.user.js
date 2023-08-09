@@ -12,6 +12,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle("body {zoom: 1.2;}");
+    GM_addStyle("body {zoom: 1.3;}");
 
 })();
