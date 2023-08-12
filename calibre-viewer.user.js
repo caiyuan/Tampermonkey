@@ -13,7 +13,7 @@
 
     /* 朗读时能手动翻页 */
 
-    GM_addStyle("#book-read-aloud-overlay {margin-left: 30px; margin-right: 30px;}");
+    GM_addStyle("#book-read-aloud-overlay {margin-left: 20px; margin-right: 20px;}");
     GM_addStyle("#book-read-aloud-overlay {width: -webkit-fill-available !important;}");
 
 
