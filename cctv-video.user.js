@@ -28,8 +28,8 @@
     `;
     } else if (segments[3].length == 4 && segments[4].length == 2 && segments[5].length == 2) {
         playingVideoStyles += `
-        .playingVideo .video_left {width: 1330px !important;}
-        .playingVideo .video_left #_video {width: 100% !important; height: 740px !important;}
+        .playingVideo .video_left {width: 1330px !important; height: 740px !important;}
+        .playingVideo .video_left #_video {width: 100% !important; height: 100% !important;}
         .playingVideo .video_right {width: 0 !important;}
     `;
     }
