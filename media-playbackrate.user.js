@@ -54,13 +54,13 @@
 
       <div id="rate-switch" data-rate="1" style="${buttonStyle}">Speed</div>
 
-      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3X</div>
-      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5X</div>
-      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7X</div>
+      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
+      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
+      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7x</div>
 
-      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3X</div>
-      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5X</div>
-      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7X</div>
+      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3x</div>
+      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5x</div>
+      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7x</div>
     `;
 
     document.body.appendChild(mediaControlPanel);
