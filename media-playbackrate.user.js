@@ -17,7 +17,7 @@
     const mediaControlPanel = document.createElement("div");
     mediaControlPanel.id = "mediaControlPanel";
     mediaControlPanel.style.cssText = `
-      z-index: 1001 !important;
+      z-index: 10001 !important;
       position: fixed !important;
       visibility: visible !important;
       top: 30%;
