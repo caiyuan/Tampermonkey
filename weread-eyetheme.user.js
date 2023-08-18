@@ -58,6 +58,7 @@
         GM_addStyle("html body.wr_whiteTheme .navBar .navBar_border {border: none;}");
 
         GM_addStyle("html body.wr_whiteTheme .app_content {background-color: #94b399 !important;}");
+        GM_addStyle("html body.wr_whiteTheme .app_content .wr_dialog_bg {background-color: #94b399;}");
         GM_addStyle("html body.wr_whiteTheme .app_content .lineBox {background-color: #94b399;}");
 
         GM_addStyle("html body.wr_whiteTheme .review_detail_container .app_content {background-color: #94b399 !important;}");
