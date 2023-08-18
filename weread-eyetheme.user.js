@@ -53,6 +53,8 @@
 
     // 书评
     if(segments[4] == 'bookDetail' || segments[4] == 'bookReview' || segments[4] == 'review') {
+        GM_addStyle(".app_content {max-width: 1200px !important;}");
+
         GM_addStyle("html body.wr_whiteTheme {background-color: #94b399;}");
         GM_addStyle("html body.wr_whiteTheme .navBar {background-color: #94b399;}");
         GM_addStyle("html body.wr_whiteTheme .navBar .navBar_border {border: none;}");
