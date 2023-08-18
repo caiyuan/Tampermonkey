@@ -65,9 +65,9 @@
 
         GM_addStyle("html body.wr_whiteTheme .review_detail_container .app_content {background-color: #94b399 !important;}");
 
-        GM_addStyle("html body.wr_whiteTheme .app_content * {color: #333 !important;}");
+        GM_addStyle("html body.wr_whiteTheme .app_content * {color: #222222 !important;}");
         GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_author.link {color: #1b88ee !important;}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_intro.hasMore:after {color: #333; background-image: linear-gradient(90deg,hsla(0,0%,100%,.0001),#94b399 51.56%,#94b399);}");
+        GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_intro.hasMore:after {color: #222222; background-image: linear-gradient(90deg,hsla(0,0%,100%,.0001),#94b399 51.56%,#94b399);}");
 
         GM_addStyle("html body.wr_whiteTheme .app_content .reader_topReview_footer {border-color: rgba(0,0,0,.05);}");
         GM_addStyle("html body.wr_whiteTheme .app_content .bookReviewList_header {border-color: rgba(0,0,0,.05);}");
