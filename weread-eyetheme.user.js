@@ -64,6 +64,7 @@
         GM_addStyle("html body.wr_whiteTheme .app_content .lineBox {background-color: #94b399;}");
 
         GM_addStyle("html body.wr_whiteTheme .review_detail_container .app_content {background-color: #94b399 !important;}");
+        GM_addStyle("html body.wr_whiteTheme .review_editor_container .app_content .reviewEditorPage_control_container {background-color: #f4f5f7;}");
 
         GM_addStyle("html body.wr_whiteTheme .app_content * {color: #222222 !important;}");
         GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_author.link {color: #1b88ee !important;}");
