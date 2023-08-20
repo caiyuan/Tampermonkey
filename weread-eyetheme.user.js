@@ -21,58 +21,39 @@
 
         /* 颜色 */
         GM_addStyle("html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .navBar {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .navBar_border {border: none;}");
+        GM_addStyle("html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}");
+        GM_addStyle("html body.wr_whiteTheme .app_fullHeight .navBar .navBar_border {border-bottom: solid 1px rgba(238,240,244,.1);}");
     }
 
     // 阅读
     if(segments[4] == 'reader') {
 
         /* 页宽 */
-        GM_addStyle(".readerContent .readerTopBar {max-width: 1200px; height: 48px;}");
-        GM_addStyle(".readerContent .app_content {max-width: 1200px;}");
+        GM_addStyle(".routerView .readerTopBar {max-width: 1200px; height: 48px;}");
+        GM_addStyle(".routerView .app_content {max-width: 1200px;}");
 
         /* 控制 */
-        GM_addStyle(".readerContent .readerControls {margin-left: 648px;}");
-        GM_addStyle(".readerContent .readerCatalog {margin-left: 80px;}");
-        GM_addStyle(".readerContent .readerNotePanel {margin-left: 80px;}");
+        GM_addStyle(".routerView .readerControls {margin-left: 648px;}");
+        GM_addStyle(".routerView .readerCatalog {margin-left: 80px;}");
+        GM_addStyle(".routerView .readerNotePanel {margin-left: 80px;}");
 
         /* 字体 */
-        GM_addStyle(".readerContent * {font-family: 'HarmonyOS Sans SC';}");
-        GM_addStyle(".readerContent .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
-        GM_addStyle(".readerContent .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
+        GM_addStyle(".routerView * {font-family: 'HarmonyOS Sans SC';}");
+        GM_addStyle(".routerView .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
+        GM_addStyle(".routerView .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
 
         /* 颜色 */
         GM_addStyle("html body.wr_whiteTheme {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .readerTopBar {background-color: #ffffff;}");
-        GM_addStyle("html body.wr_whiteTheme .readerContent .app_content {background-color: #a6c9ab;}");
-        GM_addStyle("html body.wr_whiteTheme .readerHeaderButton {color: #14801d;}");
-        GM_addStyle("html body.wr_whiteTheme .readerFooter_button {color: #14801d;}");
-        GM_addStyle("html body.wr_whiteTheme .readerChapterContent {color: #222222;}");
+        GM_addStyle("html body.wr_whiteTheme .routerView .app_content {background-color: #a6c9ab;}");
+        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerTopBar {background-color: #ffffff;}");
+        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerChapterContent {color: #222222;}");
+        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerHeaderButton {color: #14801d;}");
+        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerFooter_button {color: #14801d;}");
     }
 
     // 书评
     if(segments[4] == 'bookDetail' || segments[4] == 'bookReview' || segments[4] == 'review') {
-        GM_addStyle(".app_content {max-width: 1200px !important;}");
-
-        GM_addStyle("html body.wr_whiteTheme {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .navBar {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .navBar .navBar_border {border: none;}");
-
-        GM_addStyle("html body.wr_whiteTheme .app_content {background-color: #94b399 !important;}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .wr_dialog_bg {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .lineBox {background-color: #94b399;}");
-
-        GM_addStyle("html body.wr_whiteTheme .review_detail_container .app_content {background-color: #94b399 !important;}");
-        GM_addStyle("html body.wr_whiteTheme .review_editor_container .app_content .reviewEditorPage_control_container {background-color: #f4f5f7;}");
-
-        GM_addStyle("html body.wr_whiteTheme .app_content * {color: #222222 !important;}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_author.link {color: #1b88ee !important;}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .bookInfo_intro.hasMore:after {color: #222222; background-image: linear-gradient(90deg,hsla(0,0%,100%,.0001),#94b399 51.56%,#94b399);}");
-
-        GM_addStyle("html body.wr_whiteTheme .app_content .reader_topReview_footer {border-color: rgba(0,0,0,.05);}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .bookReviewList_header {border-color: rgba(0,0,0,.05);}");
-        GM_addStyle("html body.wr_whiteTheme .app_content .reviewDetailPage_header {border-color: rgba(0,0,0,.05);}");
+        GM_addStyle(".routerView .app_content {max-width: 1200px !important;}");
     }
 
 })();
