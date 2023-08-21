@@ -19,41 +19,59 @@
     // 书架
     if (segments[4] == 'shelf'){
 
-        /* 颜色 */
-        GM_addStyle("html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .app_fullHeight .navBar .navBar_border {border-bottom: solid 1px rgba(238,240,244,.1);}");
+        // 护眼绿色
+        const greenStyles = `
+            html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}
+            html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}
+            html body.wr_whiteTheme .app_fullHeight .navBar .navBar_border {border-bottom: solid 1px rgba(238,240,244,.1);}
+        `;
+
+        GM_addStyle(greenStyles);
     }
 
     // 阅读
     if(segments[4] == 'reader') {
 
-        /* 页宽 */
-        GM_addStyle(".routerView .readerTopBar {max-width: 1200px; height: 48px;}");
-        GM_addStyle(".routerView .app_content {max-width: 1200px;}");
+        // 通用配置
+        const commonStyles = `
+            /* 页宽 */
+            .routerView .readerTopBar {max-width: 1200px; height: 48px;}
+            .routerView .app_content {max-width: 1200px;}
+            /* 控制 */
+            .routerView .readerControls {margin-left: 648px;}
+            .routerView .readerCatalog {margin-left: 80px;}
+            .routerView .readerNotePanel {margin-left: 80px;}
+            /* 字体 */
+            .routerView * {font-family: 'HarmonyOS Sans SC';}
+            .routerView .readerTopBar * {font-family: sans-serif; font-weight: 500;}
+            .routerView .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
+            /* 颜色 */
+            .routerView .app_content .readerChapterContent {color: #b2b2b2;}
+        `;
 
-        /* 控制 */
-        GM_addStyle(".routerView .readerControls {margin-left: 648px;}");
-        GM_addStyle(".routerView .readerCatalog {margin-left: 80px;}");
-        GM_addStyle(".routerView .readerNotePanel {margin-left: 80px;}");
+        // 护眼绿色
+        const greenStyles = `
+            html body.wr_whiteTheme {background-color: #94b399;}
+            html body.wr_whiteTheme .routerView .app_content {background-color: #a6c9ab;}
+            html body.wr_whiteTheme .routerView .app_content .readerTopBar {background-color: #ffffff;}
+            html body.wr_whiteTheme .routerView .app_content .readerChapterContent {color: #333333;}
+            html body.wr_whiteTheme .routerView .app_content .readerHeaderButton {color: #14801d;}
+            html body.wr_whiteTheme .routerView .app_content .readerFooter_button {color: #14801d;}
+        `;
 
-        /* 字体 */
-        GM_addStyle(".routerView * {font-family: 'HarmonyOS Sans SC';}");
-        GM_addStyle(".routerView .readerTopBar * {font-family: sans-serif; font-weight: 500;}");
-        GM_addStyle(".routerView .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}");
-
-        /* 颜色 */
-        GM_addStyle("html body.wr_whiteTheme {background-color: #94b399;}");
-        GM_addStyle("html body.wr_whiteTheme .routerView .app_content {background-color: #a6c9ab;}");
-        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerTopBar {background-color: #ffffff;}");
-        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerChapterContent {color: #222222;}");
-        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerHeaderButton {color: #14801d;}");
-        GM_addStyle("html body.wr_whiteTheme .routerView .app_content .readerFooter_button {color: #14801d;}");
+        GM_addStyle(commonStyles);
+        GM_addStyle(greenStyles);
     }
 
     // 书评
     if(segments[4] == 'bookDetail' || segments[4] == 'bookReview' || segments[4] == 'review') {
-        GM_addStyle(".routerView .app_content {max-width: 1200px !important;}");
+
+        // 通用配置
+        const commonStyles = `
+            .routerView .app_content {max-width: 1200px !important;}
+        `;
+
+        GM_addStyle(commonStyles);
     }
 
 })();
