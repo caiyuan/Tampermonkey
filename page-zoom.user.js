@@ -5,6 +5,7 @@
 // @description  网页缩放
 // @author       Ryan
 // @match        https://mp.weixin.qq.com/*
+// @match        *.hundun.cn/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
