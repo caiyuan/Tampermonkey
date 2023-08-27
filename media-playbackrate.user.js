@@ -47,8 +47,8 @@
     mediaControlPanel.innerHTML = `
       <div id="volume-gain" data-gain="3" style="${buttonStyle}">♪</div>
       <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 23px; border-radius: 3px 0 0 3px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 23px; border-radius: 0 3px 3px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 23px; border-radius: 3px 0 0 3px; margin: 0 0 0 5px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 23px; border-radius: 0 3px 3px 0; margin: 0 5px 0 0; padding: 3px 0;">-</div>
       </div>
       <div style="clear: both;"></div>
 
