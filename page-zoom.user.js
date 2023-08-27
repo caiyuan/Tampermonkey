@@ -13,7 +13,6 @@
 (function() {
     'use strict';
 
-
     // 构建控制器面板
 
     const zoomControlPanel = document.createElement("div");
@@ -27,7 +26,7 @@
       width: 65px;
       margin: 0;
       padding: 0;
-      border-radius: 3px;
+      border-radius: 10px;
       background-color: rgba(150, 150, 150, 0.3);
       line-height: normal;
       text-align: center;
@@ -38,9 +37,6 @@
     `;
 
     const buttonStyle = `
-      margin: 5px;
-      padding: 3px;
-      border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
       color: rgba(255, 255, 255, 0.3);
       border: solid 1px rgba(255, 255, 255, 0.3);
@@ -48,13 +44,12 @@
 
     zoomControlPanel.innerHTML = `
       <div>
-        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 25px; border-radius: 3px 0 0 3px; margin: 5px 0 5px 5px; padding: 3px 0;">+</div>
-        <div zoom id="reduce" style="${buttonStyle} float: right; width: 25px; border-radius: 0 3px 3px 0; margin: 5px 5px 5px 0; padding: 3px 0;">-</div>
+        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 25px; border-radius: 7px 0 0 7px; margin: 5px 0 5px 5px; padding: 3px 0;">❉</div>
+        <div zoom id="reduce" style="${buttonStyle} float: right; width: 25px; border-radius: 0 7px 7px 0; margin: 5px 5px 5px 0; padding: 3px 0;">❄</div>
       </div>
     `;
 
     document.body.appendChild(zoomControlPanel);
-
 
     // 操作页面缩放率
 
@@ -69,7 +64,6 @@
     });
 
     GM_addStyle(`body {zoom: ${zoom};}`);
-
 
     // 控制器浮窗微调
 
