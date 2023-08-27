@@ -45,14 +45,14 @@
     `;
 
     mediaControlPanel.innerHTML = `
-      <div id="volume-gain" data-gain="3" style="${buttonStyle}">Volume</div>
+      <div id="volume-gain" data-gain="3" style="${buttonStyle} font-family: 'Trattatello',ui-sans-serif;">Volume</div>
       <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 3px 0 0 3px; margin: 0 0 5px 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 3px 3px 0; margin: 0 5px 5px 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 25px; border-radius: 3px 0 0 3px; margin: 0 0 5px 5px; padding: 3px 0;">«</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 25px; border-radius: 0 3px 3px 0; margin: 0 5px 5px 0; padding: 3px 0;">»</div>
       </div>
       <div style="clear: both;"></div>
 
-      <div id="rate-switch" data-rate="1" style="${buttonStyle}">Speed</div>
+      <div id="rate-switch" data-rate="1" style="${buttonStyle} font-family: 'Trattatello',ui-sans-serif;">Speed</div>
 
       <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
       <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
