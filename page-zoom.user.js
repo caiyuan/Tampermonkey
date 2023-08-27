@@ -23,7 +23,7 @@
       visibility: visible !important;
       top: 3%;
       right: 30px;
-      width: 65px;
+      width: 60px;
       margin: 0;
       padding: 0;
       border-radius: 10px;
@@ -44,8 +44,8 @@
 
     zoomControlPanel.innerHTML = `
       <div>
-        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 25px; border-radius: 7px 0 0 7px; margin: 5px 0 5px 5px; padding: 3px 0;">❉</div>
-        <div zoom id="reduce" style="${buttonStyle} float: right; width: 25px; border-radius: 0 7px 7px 0; margin: 5px 5px 5px 0; padding: 3px 0;">❄</div>
+        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 23px; border-radius: 7px 0 0 7px; margin: 5px 0 5px 5px; padding: 3px 0;">❉</div>
+        <div zoom id="reduce" style="${buttonStyle} float: right; width: 23px; border-radius: 0 7px 7px 0; margin: 5px 5px 5px 0; padding: 3px 0;">❄</div>
       </div>
     `;
 
