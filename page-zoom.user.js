@@ -7,7 +7,7 @@
 // @match        https://mp.weixin.qq.com/*
 // @match        *.hundun.cn/*
 // @grant        GM_addStyle
-// @run-at       document-start
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
