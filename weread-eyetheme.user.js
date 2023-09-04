@@ -42,7 +42,7 @@
             #routerView .readerCatalog {margin-left: 80px;}
             #routerView .readerNotePanel {margin-left: 80px;}
             /* 字体 */
-            #routerView * {font-family: 'HarmonyOS Sans SC';}
+            #routerView * {font-family: 'PingFang SC';}
             #routerView .readerTopBar * {font-family: sans-serif; font-weight: 500;}
             #routerView .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
             /* 颜色 */
