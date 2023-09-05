@@ -51,7 +51,7 @@
 
         // 护眼绿色
         const greenStyles = `
-            html body.wr_whiteTheme, html {background-color: #94b399 !important;}
+            html body.wr_whiteTheme, html:has(body.wr_whiteTheme) {background-color: #94b399 !important;}
             html body.wr_whiteTheme #routerView .app_content {background-color: #a6c9ab;}
             html body.wr_whiteTheme #routerView .app_content .readerTopBar {background-color: #ffffff;}
             html body.wr_whiteTheme #routerView .app_content .readerChapterContent {color: #333333;}
