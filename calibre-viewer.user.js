@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Calibre 阅读页优化
 // @author       Ryan
-// @match        http://127.0.0.1:8080/
+// @include      *://*:8080/*
 // @grant        GM_addStyle
 // ==/UserScript==
 
