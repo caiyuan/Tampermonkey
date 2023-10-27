@@ -4,8 +4,7 @@
 // @version      0.1
 // @description  网页缩放
 // @author       Ryan
-// @match        https://mp.weixin.qq.com/*
-// @match        *.hundun.cn/*
+// @match        ://*/*
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
@@ -21,7 +20,7 @@
       z-index: 10001 !important;
       position: fixed !important;
       visibility: visible !important;
-      top: 3%;
+      top: 7%;
       right: 30px;
       width: 60px;
       margin: 0;
@@ -30,7 +29,7 @@
       background-color: rgba(150, 150, 150, 0.3);
       line-height: normal;
       text-align: center;
-      font-size: 12px;
+      font-size: 9px;
       font-family: ui-monospace;
       font-weight: normal;
       cursor: pointer;
@@ -53,7 +52,7 @@
 
     // 操作页面缩放率
 
-    let zoom = 1.2;
+    let zoom = 1.0;
 
     document.getElementById("enlarge").addEventListener("click", function() {
         GM_addStyle(`body {zoom: ${zoom += 0.1};}`);
