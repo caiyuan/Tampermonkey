@@ -34,18 +34,26 @@
 
         // 通用配置
         const commonStyles = `
-            /* 页宽 */
-            #routerView .readerTopBar {max-width: 1200px; height: 48px;}
+            /* 页面宽度 */
             #routerView .app_content {max-width: 1200px;}
-            /* 控制 */
+            #routerView .app_content .readerTopBar {max-width: 1200px; height: 45px;}
+            /* 选项位置 */
             #routerView .readerControls {margin-left: 648px;}
             #routerView .readerCatalog {margin-left: 80px;}
             #routerView .readerNotePanel {margin-left: 80px;}
-            /* 字体 */
-            #routerView .readerTopBar * {font-family: sans-serif; font-weight: 500;}
-            #routerView .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
-            /* 颜色 */
+
+            /* 标题文字 */
+            #routerView .app_content .readerTopBar {font-family: '汉仪旗黑45S';}
+            #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
+            /* 内容文字 */
             #routerView .app_content .readerChapterContent {color: #b2b2b2;}
+            #routerView .app_content .readerChapterContent {font-family: '汉仪书仿';}
+            #routerView .app_content .readerChapterContent [class*='Title'] {font-family: '汉仪新蒂佛塔书';}
+            #routerView .app_content .readerChapterContent [class*='content'] {font-family: '汉仪书仿';}
+            #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: '汉仪楷体 S';}
+            /* 翻页文字 */
+            #routerView .app_content .readerHeaderButton {font-family: '汉仪老字号';}
+            #routerView .app_content .readerFooter_button {font-family: '汉仪老字号';}
         `;
 
         // 护眼绿色
