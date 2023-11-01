@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         page-zoomer
+// @name         page-zoom
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  网页缩放
