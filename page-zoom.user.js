@@ -55,14 +55,12 @@
     let zoom = 1.0;
 
     document.getElementById("enlarge").addEventListener("click", function() {
-        GM_addStyle(`body {zoom: ${zoom += 0.1};}`);
+        document.documentElement.style.zoom = ((zoom += 0.1) * 100) + "%";
     });
 
     document.getElementById("reduce").addEventListener("click", function() {
-        GM_addStyle(`body {zoom: ${zoom -= 0.1};}`);
+        document.documentElement.style.zoom = ((zoom -= 0.1) * 100) + "%";
     });
-
-    GM_addStyle(`body {zoom: ${zoom};}`);
 
     // 控制器浮窗微调
 
