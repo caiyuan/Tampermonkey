@@ -21,7 +21,7 @@
       position: fixed !important;
       visibility: visible !important;
       top: 25%;
-      right: 30px;
+      right: 15px;
       width: 60px;
       margin: 0;
       padding: 0;
