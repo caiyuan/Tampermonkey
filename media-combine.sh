@@ -2,7 +2,7 @@
 
 ######
 #
-#  借助工具 FFmpeg 整合音视频文件
+#  Combine audio & video files with FFmpeg
 #
 ######
 
