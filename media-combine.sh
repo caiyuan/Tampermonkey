@@ -11,7 +11,7 @@ audio='.m4a'
 
 ffmpeg='/usr/local/bin/ffmpeg'
 
-prefix='merge.'
+prefix='combine.'
 
 for i in `ls *$video`; do
   v=$i
