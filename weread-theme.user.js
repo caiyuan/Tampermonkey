@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         weread-eyetheme
+// @name         weread-theme
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  微信读书 护眼主题
+// @description  微信读书主题
 // @author       Ryan
 // @match        https://weread.qq.com/web/*
 // @grant        GM_addStyle
