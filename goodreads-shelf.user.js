@@ -28,7 +28,6 @@
             // 豆瓣搜索
 
             var search = "https://search.douban.com/book/subject_search?search_text=";
-
             var cover = el.querySelector(".leftAlignedImage");
             var title = cover.getAttribute("title");
             cover.setAttribute("target", "_blank");
