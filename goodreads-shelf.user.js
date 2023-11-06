@@ -31,7 +31,7 @@
 
             var cover = el.querySelector(".leftAlignedImage");
             var title = cover.getAttribute("title");
-            cover.setAttribute("href", "#");
+            cover.setAttribute("href", "javascript:;");
             cover.setAttribute("data-douban", douban.replace("{q}", title));
             cover.setAttribute("data-books", books.replace("{q}", title));
             cover.setAttribute("data-kobo", kobo.replace("{q}", title));
