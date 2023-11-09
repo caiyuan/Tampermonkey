@@ -20,7 +20,7 @@
       z-index: 10001 !important;
       position: fixed !important;
       visibility: visible !important;
-      top: 7%;
+      top: 10%;
       right: 15px;
       width: 60px;
       margin: 0;
