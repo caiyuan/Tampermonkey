@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         citic-shelf
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  使书架更简洁紧凑
 // @author       Ryan
