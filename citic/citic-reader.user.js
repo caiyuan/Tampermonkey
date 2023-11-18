@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         citic-reader
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  使内容滚动到尾部
 // @author       Ryan
