@@ -34,7 +34,7 @@
 
     var dl = document.getElementById("ebook:dl");
     dl.addEventListener("click", function () {
-        console.log('downloading ...');
+        console.log('下載中···');
         dl.textContent = '下載中·';
         dl.style.color = 'gray';
         dl.disabled = true;
