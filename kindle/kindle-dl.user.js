@@ -39,7 +39,7 @@
         dl.style.color = 'gray';
         dl.disabled = true;
 
-        dlAction();
+        dlAction(1, 0);
     });
 
     // 执行下载过程
@@ -48,8 +48,8 @@
     var page = 1;
     var books = [];
 
-    function processBook(page, index) {
-        if (index == 0) {
+    function processBook(page, index, first) {
+        if (index == 0 || first) {
             books = document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']");
         }
 
@@ -79,11 +79,11 @@
         }
     }
 
-    function dlAction() {
+    function dlAction(page, index) {
         setTimeout(function () {
             document.querySelector('#page-' + page).click();
             setTimeout(function () {
-                processBook(page, 0);
+                processBook(page, index, true);
             }, 10000);
         }, 0);
     }
