@@ -72,7 +72,7 @@
             setTimeout(function () {
                 document.querySelector('#notification-close').click();
                 processBook(page, index + 1);
-            }, 5000);
+            }, 3000);
         } else if (++page <= pages) {
             setTimeout(function () {
                 document.querySelector('#notification-close').click();
@@ -80,7 +80,7 @@
                 setTimeout(function () {
                     processBook(page, 0);
                 }, 10000);
-            }, 5000);
+            }, 3000);
         }
     }
 
