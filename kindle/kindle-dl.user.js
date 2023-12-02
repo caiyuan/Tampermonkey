@@ -19,7 +19,7 @@
     z-index: 10001 !important;
     position: fixed !important;
     top: 10%;
-    right: 30px;
+    right: 25px;
   `;
 
     ebookControlPanel.innerHTML = `
