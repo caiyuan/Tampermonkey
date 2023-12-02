@@ -44,10 +44,15 @@
 
     // 执行下载过程
 
-    var pages = 77;
+    var pages = 77; // 电子书列表总页数，根据实际修改
     var page = 1;
     var books = [];
 
+    /**
+    * page  当前的页码
+    * index 书籍的下标，从 0 开始
+    * first 首次执行时，为 true 值
+    */
     function processBook(page, index, first) {
         if (index == 0 || first) {
             books = document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']");
