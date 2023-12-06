@@ -112,6 +112,7 @@
 
         if (index == 0 || first) {
             books = document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']");
+            console.log(books);
         }
 
         var eid = books[index].id;
