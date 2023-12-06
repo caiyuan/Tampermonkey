@@ -152,7 +152,7 @@
             document.querySelector('#page-' + page).click();
             setTimeout(function () {
                 processBook(page, index, true);
-            }, 10000);
+            }, 5000);
         }, 0);
     }
 
