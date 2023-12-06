@@ -26,17 +26,36 @@
     const ebookInputStyle = `
         width: 30px;
         text-align: center;
+        line-height: 15px;
         font-family: monospace;
         color: darkred;
-        display: none;
+    `;
+
+    const ebookBlockStyle = `
+        display: inline-block;
+        cursor: pointer;
+        padding: 11px 13px 13px;
+        border-radius: 5px;
+        margin: 0px;
+        vertical-align: middle;
+        text-align: center;
+        margin-inline-start: 10px;
+        border: 1px solid;
+        color: white;
+        background: linear-gradient(rgb(90, 0, 0), rgb(0, 0, 0));
+        min-height: 12px;
+        line-height: 12px;
+        min-width: 10px;
     `;
 
     ebookControlPanel.innerHTML = `
         <div>
-            <input id="ebook:page" style="${ebookInputStyle}"/>
-            <input id="ebook:index" style="${ebookInputStyle}"/>
-            <button id="ebook:dl" style="display: inline-block; cursor: pointer; padding: 11px 13px 13px; border-radius: 5px; margin: 0px; vertical-align: middle; text-align: center; margin-inline-start: 10px; border: 1px solid; color: white; background: linear-gradient(rgb(90, 0, 0), rgb(0, 0, 0)); min-height: 12px; line-height: 12px; min-width: 10px;">自動下載</button>
-            <div style="position: fixed; right: 25px; font-size: 11px; font-family: cursive; color: darkred;">
+            <div style="${ebookBlockStyle} padding: 9px;">
+                <input id="ebook:page" style="${ebookInputStyle}"/>
+                <input id="ebook:index" style="${ebookInputStyle}"/>
+            </div>
+            <button id="ebook:dl" style="${ebookBlockStyle}">自動下載</button>
+            <div style="position: fixed; right: 25px; font-size: 12px; color: darkred;">
                 <text id="ebook:log">::</text>
             </div>
         </div>
@@ -64,9 +83,6 @@
         } else {
             dlAction(1, 0);
         }
-
-        dl_page.style.display = 'inline';
-        dl_index.style.display = 'inline';
     });
 
     function dlChange() {
