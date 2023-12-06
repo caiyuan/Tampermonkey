@@ -113,7 +113,6 @@
         if (index == 0 || first) {
             const books = Array.from(document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']"));
             ids = books.map(book => book.id);
-            console.log(ids);
         }
 
         const eid = ids[index];
