@@ -64,15 +64,15 @@
         } else {
             dlAction(1, 0);
         }
+
+        dl_page.style.display = 'inline';
+        dl_index.style.display = 'inline';
     });
 
     function dlChange() {
         dl.textContent = '自動下載';
         dl.style.color = 'white';
         dl.disabled = false;
-
-        dl_page.style.display = 'inline';
-        dl_index.style.display = 'inline';
 
         dlChangeState = true;
     }
