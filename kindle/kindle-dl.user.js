@@ -68,10 +68,10 @@
 
     var dlChangeState = false;
 
-    var dl = document.getElementById("ebook:dl");
-    var dl_page = document.getElementById("ebook:page");
-    var dl_index = document.getElementById("ebook:index");
-    var dl_log = document.getElementById("ebook:log");
+    const dl = document.getElementById("ebook:dl");
+    const dl_page = document.getElementById("ebook:page");
+    const dl_index = document.getElementById("ebook:index");
+    const dl_log = document.getElementById("ebook:log");
 
     dl.addEventListener("click", function () {
         console.log('下載中···');
@@ -80,7 +80,9 @@
         dl.disabled = true;
 
         if (dlChangeState) {
-            dlAction(dl_page.value, dl_index.value);
+            const page = parseInt(dl_page.value);
+            const index = parseInt(dl_index.value);
+            dlAction(page, index);
         } else {
             dlAction(1, 0);
         }
@@ -100,8 +102,7 @@
     // 执行下载过程
 
     var pages = 77; // 电子书列表总页数，根据实际修改
-    var page = 1;
-    var books = [];
+    var ids = [];
 
     /**
      * page  当前的页码
@@ -111,11 +112,12 @@
     function processBook(page, index, first) {
 
         if (index == 0 || first) {
-            books = document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']");
-            console.log(books);
+            var books = Array.from(document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']"));
+            ids = books.map(book => book.id);
+            console.log(ids);
         }
 
-        var eid = books[index].id;
+        var eid = ids[index];
         var bid = eid.substring(0, eid.indexOf(':'));
         var title = document.querySelector('#content-title-' + bid).textContent;
 
@@ -129,13 +131,14 @@
         document.querySelector('#download_and_transfer_list_' + bid + '_0').click();
         document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
 
-        if (index < books.length - 1) {
+        if (index < ids.length - 1) {
             setTimeout(function () {
                 document.querySelector('#notification-close').click();
                 processBook(page, index + 1);
             }, 3000);
-        } else if (++page <= pages) {
+        } else {
             setTimeout(function () {
+                ++page;
                 document.querySelector('#notification-close').click();
                 document.querySelector('#page-' + page).click();
                 setTimeout(function () {
