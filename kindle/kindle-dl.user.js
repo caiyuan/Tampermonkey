@@ -24,7 +24,7 @@
     `;
 
     const ebookInputStyle = `
-        width: 30px;
+        width: 35px;
         text-align: center;
         line-height: 15px;
         font-family: monospace;
@@ -51,8 +51,9 @@
     ebookControlPanel.innerHTML = `
         <div>
             <div style="${ebookBlockStyle} padding: 9px;">
-                <input id="ebook:page" style="${ebookInputStyle}"/>
-                <input id="ebook:index" style="${ebookInputStyle}"/>
+                <input id="ebook:page" style="${ebookInputStyle} margin: 0;" value="頁碼"/>
+                <span style="margin: 0;">::</span>
+                <input id="ebook:index" style="${ebookInputStyle} margin: 0;" value="下標"/>
             </div>
             <button id="ebook:dl" style="${ebookBlockStyle}">自動下載</button>
             <div style="position: fixed; right: 25px; font-size: 12px; color: darkred;">
