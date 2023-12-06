@@ -66,7 +66,7 @@
 
     // 操作下载功能
 
-    var dlChangeState = false;
+    let dlChangeState = false;
 
     const dl = document.getElementById("ebook:dl");
     const dl_page = document.getElementById("ebook:page");
@@ -101,8 +101,8 @@
 
     // 执行下载过程
 
-    var pages = 77; // 电子书列表总页数，根据实际修改
-    var ids = [];
+    const pages = 77; // 电子书列表总页数，根据实际修改
+    let ids = [];
 
     /**
      * page  当前的页码
@@ -112,16 +112,16 @@
     function processBook(page, index, first) {
 
         if (index == 0 || first) {
-            var books = Array.from(document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']"));
+            const books = Array.from(document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']"));
             ids = books.map(book => book.id);
             console.log(ids);
         }
 
-        var eid = ids[index];
-        var bid = eid.substring(0, eid.indexOf(':'));
-        var title = document.querySelector('#content-title-' + bid).textContent;
+        const eid = ids[index];
+        const bid = eid.substring(0, eid.indexOf(':'));
+        const title = document.querySelector('#content-title-' + bid).textContent;
 
-        var log = page + "::" + index + "::" + bid + "::" + title;
+        const log = page + "::" + index + "::" + bid + "::" + title;
 
         dl_log.textContent = log;
 
