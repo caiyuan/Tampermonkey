@@ -132,8 +132,7 @@
             document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
         } catch (error) {
             dlSucc = false;
-            console.error(log);
-            console.error(error);
+            console.error("ERROR::" + log);
         }
 
         if (index < ids.length - 1) {
