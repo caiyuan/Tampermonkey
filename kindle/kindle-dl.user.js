@@ -113,6 +113,8 @@
         if (index == 0 || first) {
             const books = Array.from(document.querySelectorAll("#CONTENT_LIST input[id$=':KindleEBook']"));
             ids = books.map(book => book.id);
+
+            console.log(ids);
         }
 
         const eid = ids[index];
@@ -132,14 +134,14 @@
             document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
         } catch (error) {
             dlSucc = false;
-            console.error("ERROR::" + log);
+            console.error("ERROR$$" + log);
         }
 
         if (index < ids.length - 1) {
             setTimeout(function () {
                 if(dlSucc) { document.querySelector('#notification-close').click(); }
                 processBook(page, index + 1);
-            }, 3000);
+            }, 5000);
         } else {
             setTimeout(function () {
                 ++page;
@@ -148,7 +150,7 @@
                 setTimeout(function () {
                     processBook(page, 0);
                 }, 10000);
-            }, 3000);
+            }, 5000);
         }
     }
 
@@ -157,7 +159,7 @@
             document.querySelector('#page-' + page).click();
             setTimeout(function () {
                 processBook(page, index, true);
-            }, 5000);
+            }, 10000);
         }, 0);
     }
 
