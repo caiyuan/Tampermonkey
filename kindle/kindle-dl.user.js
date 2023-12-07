@@ -125,19 +125,26 @@
 
         console.log(log);
 
-        document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid).click();
-        document.querySelector('#download_and_transfer_list_' + bid + '_0').click();
-        document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
+        let dlSucc = true;
+        try {
+            document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid).click();
+            document.querySelector('#download_and_transfer_list_' + bid + '_0').click();
+            document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
+        }catch(e) {
+            dlSucc = false;
+            console.error(log);
+            console.error(e);
+        }
 
         if (index < ids.length - 1) {
             setTimeout(function () {
-                document.querySelector('#notification-close').click();
+                if(dlSucc) { document.querySelector('#notification-close').click(); }
                 processBook(page, index + 1);
             }, 3000);
         } else {
             setTimeout(function () {
                 ++page;
-                document.querySelector('#notification-close').click();
+                if(dlSucc) { document.querySelector('#notification-close').click(); }
                 document.querySelector('#page-' + page).click();
                 setTimeout(function () {
                     processBook(page, 0);
