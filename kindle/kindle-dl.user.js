@@ -130,10 +130,10 @@
             document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid).click();
             document.querySelector('#download_and_transfer_list_' + bid + '_0').click();
             document.querySelector('#DOWNLOAD_AND_TRANSFER_ACTION_' + bid + '_CONFIRM').click();
-        }catch(e) {
+        } catch (error) {
             dlSucc = false;
             console.error(log);
-            console.error(e);
+            console.error(error);
         }
 
         if (index < ids.length - 1) {
