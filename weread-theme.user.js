@@ -43,7 +43,7 @@
             #routerView .readerNotePanel {margin-left: 80px;}
 
             /* 标题文字 */
-            #routerView .app_content .readerTopBar {font-family: '汉仪旗黑45S';}
+            #routerView .app_content .readerTopBar {font-family: '汉仪旗黑 45S';}
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
             /* 内容文字 */
             #routerView .app_content .readerChapterContent {color: #b2b2b2;}
