@@ -19,7 +19,7 @@
             var avgRating = info[2];
             var ratings = info[4];
             var published = info[8];
-            if (avgRating < 3.7 || ratings < 3000 || published < 2010) {
+            if (avgRating < 3.7 || ratings < 3000 || published < 2015) {
                 el.setAttribute("style", "display:none");
             }
 
