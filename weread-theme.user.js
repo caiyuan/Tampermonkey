@@ -47,8 +47,8 @@
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
             /* 内容文字 */
             #routerView .app_content .readerChapterContent {color: #b2b2b2;}
-            #routerView .app_content .readerChapterContent [class] {font-family: '汉仪书仿 55W';}
-            #routerView .app_content .readerChapterContent [class*='content'] {font-family: '汉仪书仿 55W';}
+            #routerView .app_content .readerChapterContent [class] {font-family: '汉仪旗黑 55S','汉仪书仿 55W';}
+            #routerView .app_content .readerChapterContent [class*='content'] {font-family: '汉仪旗黑 55S','汉仪书仿 55W';}
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: '汉仪尚巍手书';}
             #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: '汉仪有楷 45W';}
             /* 翻页文字 */
