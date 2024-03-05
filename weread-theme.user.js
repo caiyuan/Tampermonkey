@@ -48,8 +48,8 @@
             /* 内容文字 */
             #routerView .app_content .readerChapterContent {color: #b2b2b2;}
             #routerView .app_content .readerChapterContent [class] {font-family: '汉仪书仿 55W';}
-            #routerView .app_content .readerChapterContent [class*='Title'] {font-family: '汉仪尚巍手书';}
             #routerView .app_content .readerChapterContent [class*='content'] {font-family: '汉仪书仿 55W';}
+            #routerView .app_content .readerChapterContent [class*='Title'] {font-family: '汉仪尚巍手书';}
             #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: '汉仪有楷 45W';}
             /* 翻页文字 */
             #routerView .app_content .readerHeaderButton {font-family: '汉仪花冠 55W';}
