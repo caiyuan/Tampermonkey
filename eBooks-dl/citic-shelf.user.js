@@ -16,6 +16,8 @@
     GM_addStyle(".list-item-wrap .content {width: 75vw !important;}");
 
     GM_addStyle(".feedGeneral:not(:has(.vipTag)) {display: none;}");
+    // GM_addStyle(".feedGeneral:is(:has(.vipTag)) {display: none;}");
+
     GM_addStyle(".adbannerbBack { display: none;}");
 
 })();
