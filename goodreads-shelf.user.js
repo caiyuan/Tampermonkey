@@ -28,6 +28,10 @@
             {
                 el.setAttribute("style", "display:none");
             }
+            else if (!published)
+            {
+                el.setAttribute("style", "display:none");
+            }
 
 
             // 图书检索
