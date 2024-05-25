@@ -11,6 +11,13 @@
 (function() {
     'use strict';
 
+
+    /* 内容置于屏幕中央 */
+
+    GM_addStyle("#book-left-margin {padding-left: 12%; margin-right: 3%; filter: invert(5%);}");
+    GM_addStyle("#book-right-margin {padding-right: 12%; margin-left: 3%; filter: invert(5%);}");
+
+
     /* 朗读时能手动翻页 */
 
     GM_addStyle("#book-read-aloud-overlay {margin-left: 20px; margin-right: 20px;}");
