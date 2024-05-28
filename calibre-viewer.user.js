@@ -24,21 +24,31 @@
     GM_addStyle("#book-read-aloud-overlay > div {position: fixed; right: 0;}");
 
 
-    /* 仅展示中文语音项 */
+    /* 忽略朗读中断提示 & 仅展示中文语音项 */
+
+    GM_addStyle(".modal-container {display: none !important;}");
 
     const lang = "zh-CN";
 
     function filterOptions() {
-        const select = document.querySelector('select[id^="auto-id-"]');
-        if (!select) return;
 
-        const options = select.options;
-        for (let i = 0, len = options.length; i < len; i++) {
-            const isLangMatched = options[i].text.includes(lang);
-            options[i].style.display = isLangMatched ? "block" : "none";
+        const select = document.querySelector('select[id^="auto-id-"]');
+
+        if (!select) {
+            document.getElementById('modal-container').classList.add('modal-container');
+            document.querySelector('#modal-container>div>a').click();
+
+        } else {
+            document.getElementById('modal-container').classList.remove('modal-container');
+
+            const options = select.options;
+            for (let i = 0, len = options.length; i < len; i++) {
+                const isLangMatched = options[i].text.includes(lang);
+                options[i].style.display = isLangMatched ? "block" : "none";
+            }
         }
     }
 
-    setInterval(filterOptions, 3000);
+    setInterval(filterOptions, 1000);
 
 })();
