@@ -23,35 +23,4 @@
     GM_addStyle("#book-read-aloud-overlay {margin-left: 12%; margin-right: 12%; width: 76% !important;}");
     GM_addStyle("#book-read-aloud-overlay > div {position: fixed; right: 0;}");
 
-
-    /* 忽略朗读中断提示 & 仅展示中文语音项 */
-
-    GM_addStyle(".modal-container {display: none !important;}");
-
-    const lang = "zh-CN";
-
-    function modalContainer() {
-
-        if (window.location.hash.includes("#book_id")) {
-
-            const select = document.querySelector('select[id^="auto-id-"]');
-
-            if (!select) {
-                document.getElementById('modal-container').classList.add('modal-container');
-                document.querySelector('#modal-container>div>a').click();
-
-            } else {
-                document.getElementById('modal-container').classList.remove('modal-container');
-
-                const options = select.options;
-                for (let i = 0, len = options.length; i < len; i++) {
-                    const isLangMatched = options[i].text.includes(lang);
-                    options[i].style.display = isLangMatched ? "block" : "none";
-                }
-            }
-        }
-    }
-
-    setInterval(modalContainer, 1000);
-
 })();
