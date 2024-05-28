@@ -2,7 +2,7 @@
 // @name         calibre-viewer
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
-// @description  Calibre 阅读页优化
+// @description  calibre 阅读页面优化
 // @author       Ryan
 // @include      *://*:8080/*
 // @grant        GM_addStyle
