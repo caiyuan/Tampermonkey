@@ -24,6 +24,11 @@
     GM_addStyle("#book-read-aloud-overlay {width: -webkit-fill-available !important;}");
 
 
+    /* 忽略朗读中断提示 */
+
+    GM_addStyle("#modal-container {position: unset !important; display: none !important;}");
+
+
     /* 仅展示中文语音项 */
 
     const lang = "zh-CN";
