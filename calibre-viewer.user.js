@@ -30,25 +30,28 @@
 
     const lang = "zh-CN";
 
-    function filterOptions() {
+    function modalContainer() {
 
-        const select = document.querySelector('select[id^="auto-id-"]');
+        if (window.location.hash.includes("#book_id")) {
 
-        if (!select) {
-            document.getElementById('modal-container').classList.add('modal-container');
-            document.querySelector('#modal-container>div>a').click();
+            const select = document.querySelector('select[id^="auto-id-"]');
 
-        } else {
-            document.getElementById('modal-container').classList.remove('modal-container');
+            if (!select) {
+                document.getElementById('modal-container').classList.add('modal-container');
+                document.querySelector('#modal-container>div>a').click();
 
-            const options = select.options;
-            for (let i = 0, len = options.length; i < len; i++) {
-                const isLangMatched = options[i].text.includes(lang);
-                options[i].style.display = isLangMatched ? "block" : "none";
+            } else {
+                document.getElementById('modal-container').classList.remove('modal-container');
+
+                const options = select.options;
+                for (let i = 0, len = options.length; i < len; i++) {
+                    const isLangMatched = options[i].text.includes(lang);
+                    options[i].style.display = isLangMatched ? "block" : "none";
+                }
             }
         }
     }
 
-    setInterval(filterOptions, 1000);
+    setInterval(modalContainer, 1000);
 
 })();
