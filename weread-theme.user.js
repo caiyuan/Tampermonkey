@@ -35,12 +35,12 @@
         // 通用配置
         const commonStyles = `
             /* 页面宽度 */
-            #routerView .app_content {max-width: 1100px;}
-            #routerView .app_content .readerTopBar {max-width: 1100px; height: 45px;}
+            #routerView .app_content {max-width: 1050px;}
+            #routerView .app_content .readerTopBar {max-width: 1050px; height: 45px;}
             /* 选项位置 */
-            #routerView .readerControls {margin-left: 600px;}
-            #routerView .readerCatalog {margin-left: 30px;}
-            #routerView .readerNotePanel {margin-left: 30px;}
+            #routerView .readerControls {margin-left: 575px;}
+            #routerView .readerCatalog {margin-left: 5px;}
+            #routerView .readerNotePanel {margin-left: 5px;}
 
             /* 标题文字 */
             #routerView .app_content .readerTopBar {font-family: 'HYHuaGuan_65W';}
