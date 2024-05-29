@@ -47,7 +47,7 @@
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
             /* 内容文字 */
             #routerView .app_content .readerChapterContent {color: #b2b2b2;}
-            #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'HYQiHei_55S';}
+            #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'HYQiHei_50S';}
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: 'HYShangWeiShouShuW';}
             #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYYouKai-45W';}
             /* 翻页文字 */
