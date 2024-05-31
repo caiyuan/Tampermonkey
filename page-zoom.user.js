@@ -20,12 +20,12 @@
       z-index: 10001 !important;
       position: fixed !important;
       visibility: visible !important;
-      top: 10%;
+      top: 15%;
       right: 15px;
       width: 60px;
       margin: 0;
       padding: 0;
-      border-radius: 10px;
+      border-radius: 3px;
       background-color: rgba(150, 150, 150, 0.3);
       line-height: normal;
       text-align: center;
@@ -43,8 +43,8 @@
 
     zoomControlPanel.innerHTML = `
       <div>
-        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 23px; border-radius: 7px 0 0 7px; margin: 5px 0 5px 5px; padding: 3px 0;">❉</div>
-        <div zoom id="reduce" style="${buttonStyle} float: right; width: 23px; border-radius: 0 7px 7px 0; margin: 5px 5px 5px 0; padding: 3px 0;">❄</div>
+        <div zoom id="enlarge" style="${buttonStyle} float: left; width: 23px; border-radius: 3px 0 0 3px; margin: 5px 0 5px 5px; padding: 3px 0;">❉</div>
+        <div zoom id="reduce" style="${buttonStyle} float: right; width: 23px; border-radius: 0 3px 3px 0; margin: 5px 5px 5px 0; padding: 3px 0;">❄</div>
       </div>
     `;
 
