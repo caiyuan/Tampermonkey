@@ -23,4 +23,23 @@
     GM_addStyle("#book-read-aloud-overlay {margin-left: 12%; margin-right: 12%; width: 76% !important;}");
     GM_addStyle("#book-read-aloud-overlay > div {position: fixed; right: 0;}");
 
+
+    /* 仅展示指定语音项 */
+
+    const languages = ["zh-", "en-US"];
+    setInterval(() => {
+        const select = document.querySelector('select[id^="auto-id-"]');
+        if (!select) return;
+
+        Array.from(select.options).forEach(option => {
+            option.style.display = "none";
+
+            languages.forEach(lang => {
+                if(option.text.includes(lang)) {
+                    option.style.display = "block";
+                }
+            });
+        });
+    }, 1000);
+
 })();
