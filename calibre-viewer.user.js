@@ -14,8 +14,8 @@
 
     /* 内容置于屏幕中央 */
 
-    GM_addStyle("#book-left-margin {padding-left: 12%; margin-right: 3%; filter: invert(5%);}");
-    GM_addStyle("#book-right-margin {padding-right: 12%; margin-left: 3%; filter: invert(5%);}");
+    GM_addStyle("@media screen and (min-width: 1200px) { #book-left-margin {padding-left: 12%; margin-right: 3%; filter: invert(5%);} }");
+    GM_addStyle("@media screen and (min-width: 1200px) { #book-right-margin {padding-right: 12%; margin-left: 3%; filter: invert(5%);} }");
 
 
     /* 朗读时能手动翻页 */
