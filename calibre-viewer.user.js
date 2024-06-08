@@ -23,7 +23,9 @@
 
     /* 朗读时能手动翻页 */
 
-    GM_addStyle("#book-read-aloud-overlay {margin-left: 12%; margin-right: 12%; width: 76% !important;}");
+    GM_addStyle("@media screen and (min-width: 1200px) { #book-read-aloud-overlay {margin-left: 15%; margin-right: 15%; width: 70% !important;} }");
+    GM_addStyle("@media screen and (max-width: 1200px) { #book-read-aloud-overlay {margin-left: 3%; margin-right: 3%; width: 94% !important;} }");
+
     GM_addStyle("#book-read-aloud-overlay > div {position: fixed; right: 0;}");
 
 
