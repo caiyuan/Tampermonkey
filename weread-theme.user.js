@@ -38,7 +38,7 @@
             #routerView .app_content {max-width: 1050px;}
             #routerView .app_content .readerTopBar {max-width: 1050px; height: 45px;}
             /* 选项位置 */
-            #routerView .readerControls {margin-left: 575px;}
+            #routerView .readerControls {margin-left: 550px;}
             #routerView .readerCatalog {margin-left: 5px;}
             #routerView .readerNotePanel {margin-left: 5px;}
 
@@ -67,6 +67,10 @@
 
         GM_addStyle(commonStyles);
         GM_addStyle(greenStyles);
+
+        // 动态位置
+        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {margin-left: 500px;} }");
+        GM_addStyle("@media screen and (min-width: 1200px) { #routerView .readerControls {margin-left: 550px;} }");
     }
 
     // 书评
