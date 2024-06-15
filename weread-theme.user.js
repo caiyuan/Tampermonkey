@@ -68,9 +68,13 @@
         GM_addStyle(commonStyles);
         GM_addStyle(greenStyles);
 
+
         // 动态位置
-        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {margin-left: 500px;} }");
         GM_addStyle("@media screen and (min-width: 1200px) { #routerView .readerControls {margin-left: 550px;} }");
+
+        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {margin-left: 500px;} }");
+        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {opacity: 0;} }");
+        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls:hover {opacity: 1; transition: opacity 0.3s ease;} }");
     }
 
     // 书评
