@@ -46,7 +46,6 @@
             #routerView .app_content .readerTopBar {font-family: 'HYHuaGuan_65W';}
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
             /* 内容文字 */
-            #routerView .app_content .readerChapterContent {color: #b2b2b2;}
             #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'HYQiHei_55S';}
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: 'HYShangWeiShouShuW';}
             #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYYouKai-45W';}
@@ -65,8 +64,14 @@
             html body.wr_whiteTheme #routerView .app_content .readerFooter_button {color: #14801d;}
         `;
 
+        // 默认黑色
+        const darkStyles = `
+            #routerView .app_content .readerChapterContent {color: #d0d0d0;}
+        `;
+
         GM_addStyle(commonStyles);
         GM_addStyle(greenStyles);
+        GM_addStyle(darkStyles);
 
 
         // 动态位置
