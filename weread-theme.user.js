@@ -20,13 +20,13 @@
     if (segments[4] == 'shelf'){
 
         // 护眼绿色
-        const greenStyles = `
+        const whiteStyles = `
             html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}
             html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}
             html body.wr_whiteTheme .app_fullHeight .navBar .navBar_border {border-bottom: solid 1px rgba(238,240,244,.1);}
         `;
 
-        GM_addStyle(greenStyles);
+        GM_addStyle(whiteStyles);
     }
 
     // 阅读
@@ -55,7 +55,7 @@
         `;
 
         // 护眼绿色
-        const greenStyles = `
+        const whiteStyles = `
             html body.wr_whiteTheme, html:has(body.wr_whiteTheme) {background-color: #94b399 !important;}
             html body.wr_whiteTheme #routerView .app_content {background-color: #a6c9ab;}
             html body.wr_whiteTheme #routerView .app_content .readerTopBar {background-color: #ffffff;}
@@ -70,7 +70,7 @@
         `;
 
         GM_addStyle(commonStyles);
-        GM_addStyle(greenStyles);
+        GM_addStyle(whiteStyles);
         GM_addStyle(darkStyles);
 
 
