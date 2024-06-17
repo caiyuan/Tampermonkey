@@ -66,7 +66,7 @@
 
         // 默认黑色
         const darkStyles = `
-            #routerView .app_content .readerChapterContent {color: #d0d0d0;}
+            #routerView .app_content .readerChapterContent {color: #000;}
         `;
 
         GM_addStyle(commonStyles);
