@@ -58,8 +58,8 @@
         const whiteStyles = `
             html body.wr_whiteTheme, html:has(body.wr_whiteTheme) {background-color: #94b399;}
             html body.wr_whiteTheme #routerView .app_content {background-color: #a6c9ab;}
-            html body.wr_whiteTheme #routerView .app_content .readerTopBar {background-color: #ffffff;}
-            html body.wr_whiteTheme #routerView .app_content .readerChapterContent {color: #333333;}
+            html body.wr_whiteTheme #routerView .app_content .readerTopBar {background-color: #fff;}
+            html body.wr_whiteTheme #routerView .app_content .readerChapterContent {color: #222;}
             html body.wr_whiteTheme #routerView .app_content .readerHeaderButton {color: #14801d;}
             html body.wr_whiteTheme #routerView .app_content .readerFooter_button {color: #14801d;}
         `;
