@@ -36,7 +36,9 @@
         const commonStyles = `
             /* 页面宽度 */
             #routerView .app_content {max-width: 1050px;}
-            #routerView .app_content .readerTopBar {max-width: 1050px; height: 45px;}
+            #routerView .app_content .readerTopBar {max-width: 1050px; height: 45px; opacity: 0;}
+            #routerView .app_content .readerTopBar:hover {opacity: 1; transition: opacity 0.3s ease;}
+
             /* 选项位置 */
             #routerView .readerCatalog {margin-left: 5px;}
             #routerView .readerNotePanel {margin-left: 5px;}
