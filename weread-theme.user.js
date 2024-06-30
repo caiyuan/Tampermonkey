@@ -35,14 +35,14 @@
         // 通用配置
         const commonStyles = `
             /* 页面宽度 */
-            #routerView .app_content {max-width: 1050px;}
-            #routerView .app_content .readerTopBar {max-width: 1050px; height: 45px; opacity: 0;}
+            #routerView .app_content {max-width: 990px;}
+            #routerView .app_content .readerTopBar {max-width: 990px; height: 45px; opacity: 0;}
             #routerView .app_content .readerTopBar:hover {opacity: 1; transition: opacity 0.3s ease;}
 
             /* 选项位置 */
-            #routerView .readerCatalog {margin-left: 5px;}
-            #routerView .readerNotePanel {margin-left: 5px;}
-            #routerView .readerControls {margin-left: 550px;}
+            #routerView .readerCatalog {margin-left: -25px;}
+            #routerView .readerNotePanel {margin-left: -25px;}
+            #routerView .readerControls {margin-left: 525px;}
 
             /* 标题文字 */
             #routerView .app_content .readerTopBar {font-family: 'HYHuaGuan_65W';}
@@ -61,7 +61,7 @@
             html body.wr_whiteTheme, html:has(body.wr_whiteTheme) {background-color: #94b399;}
             html body.wr_whiteTheme #routerView .app_content {background-color: #a6c9ab;}
             html body.wr_whiteTheme #routerView .app_content .readerTopBar {background-color: #fff;}
-            html body.wr_whiteTheme #routerView .app_content .readerChapterContent {color: #222;}
+            html body.wr_whiteTheme #routerView .app_content .readerChapterContent {color: #2c2c2c;}
             html body.wr_whiteTheme #routerView .app_content .readerHeaderButton {color: #14801d;}
             html body.wr_whiteTheme #routerView .app_content .readerFooter_button {color: #14801d;}
         `;
@@ -76,10 +76,10 @@
         GM_addStyle(darkStyles);
 
         // 选项位置
-        GM_addStyle("@media screen and (min-width: 1200px) { #routerView .readerControls {margin-left: 550px;} }");
-        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {margin-left: 500px;} }");
-        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls {opacity: 0;} }");
-        GM_addStyle("@media screen and (max-width: 1200px) { #routerView .readerControls:hover {opacity: 1; transition: opacity 0.3s ease;} }");
+        GM_addStyle("@media screen and (min-width: 1100px) { #routerView .readerControls {margin-left: 525px;} }");
+        GM_addStyle("@media screen and (max-width: 1100px) { #routerView .readerControls {margin-left: 475px;} }");
+        GM_addStyle("@media screen and (max-width: 1100px) { #routerView .readerControls {opacity: 0;} }");
+        GM_addStyle("@media screen and (max-width: 1100px) { #routerView .readerControls:hover {opacity: 1; transition: opacity 0.3s ease;} }");
     }
 
     // 书评
