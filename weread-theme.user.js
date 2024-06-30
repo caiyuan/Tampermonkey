@@ -23,7 +23,8 @@
         const whiteStyles = `
             html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}
             html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}
-            html body.wr_whiteTheme .app_fullHeight .navBar .navBar_border:after {border-bottom: solid 1px rgba(238,240,244,.1);}
+            html body.wr_whiteTheme .app_fullHeight .navBar {border-bottom: solid 1px #ffffff50;}
+            html body.wr_whiteTheme .app_fullHeight .navBar * {border: none;}
         `;
 
         GM_addStyle(whiteStyles);
