@@ -22,47 +22,44 @@
       visibility: visible !important;
       top: 20%;
       right: 15px;
-      width: 60px;
+      width: 45px;
       margin: 0;
       padding: 0;
       border-radius: 3px;
       background-color: rgba(150, 150, 150, 0.3);
       line-height: normal;
       text-align: center;
-      font-size: 12px;
-      font-family: ui-monospace;
+      font-size: 9px;
+      font-family: Menlo, ui-monospace;
       font-weight: normal;
       cursor: pointer;
     `;
 
     const buttonStyle = `
-      margin: 5px;
+      margin: 3px;
       padding: 3px;
       border-radius: 3px;
       background-color: rgba(0, 0, 0, 0.3);
       color: rgba(255, 255, 255, 0.3);
-      border: solid 1px rgba(255, 255, 255, 0.3);
     `;
 
     mediaControlPanel.innerHTML = `
       <div id="volume-gain" data-gain="3" style="${buttonStyle}">♪</div>
       <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 23px; border-radius: 3px 0 0 3px; margin: 0 0 0 5px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 23px; border-radius: 0 3px 3px 0; margin: 0 5px 0 0; padding: 3px 0;">-</div>
+        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 18px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;">+</div>
+        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 18px; border-radius: 0 3px 3px 0; margin: 0 3px 0 0; padding: 3px 0;">-</div>
       </div>
       <div style="clear: both;"></div>
 
       <div id="rate-switch" data-rate="1" style="${buttonStyle}">➟</div>
 
-      <div class="rate-fast" data-rate="2.5" style="${buttonStyle}">2.5x</div>
       <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
       <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
       <div class="rate-fast" data-rate="7" style="${buttonStyle}">7x</div>
 
-      <div class="rate-slow" data-rate="1.3" style="${buttonStyle}">1.3x</div>
       <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5x</div>
-      <div class="rate-slow" data-rate="1.7" style="${buttonStyle}">1.7x</div>
-      <div class="rate-slow" data-rate="2" style="${buttonStyle}">2x</div>
+      <div class="rate-slow" data-rate="2.0" style="${buttonStyle}">2.0x</div>
+      <div class="rate-slow" data-rate="2.5" style="${buttonStyle}">2.5x</div>
     `;
 
     document.body.appendChild(mediaControlPanel);
@@ -216,9 +213,6 @@
     GM_addStyle("#mediaControlPanel:hover {opacity: 1;}");
 
     GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {color: rgba(255,255,255,1) !important}");
-    GM_addStyle("[class|='volume']:hover,[id|='volume']:hover {border: solid 1px rgba(255,255,255,1) !important}");
-
     GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {color: rgba(255,255,255,1) !important}");
-    GM_addStyle("[class|='rate']:hover,[id|='rate']:hover {border: solid 1px rgba(255,255,255,1) !important}");
 
 })();
