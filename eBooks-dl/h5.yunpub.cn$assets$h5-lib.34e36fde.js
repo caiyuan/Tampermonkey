@@ -11,7 +11,7 @@
 *  2、自動點擊, 逐個下載 (Chrome -> DevTools -> Console)
 
 (function autoClick() {
-    var links = document.querySelectorAll('#dli a');
+    var links = document.querySelectorAll('#downloadListContainer a');
     var index = 0;
 
     var interval = setInterval(function() {
@@ -31,20 +31,36 @@ class Archive {
 
     open(e, t) {
         return this.zip.loadAsync(e, { base64: t }).then(zip => {
-            const dli = document.createElement("div");
-            dli.id = "dli";
-            document.body.appendChild(dli);
+            const downloadListContainer = document.createElement("div");
+            downloadListContainer.id = "downloadListContainer";
+            downloadListContainer.style.position = 'fixed';
+            downloadListContainer.style.top = '0';
+            downloadListContainer.style.left = '0';
+            downloadListContainer.style.width = '100%';
+            downloadListContainer.style.backgroundColor = 'white';
+            downloadListContainer.style.zIndex = '1000';
+            downloadListContainer.style.padding = '10px';
+            downloadListContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+            downloadListContainer.style.overflow = 'auto';
+            downloadListContainer.style.maxHeight = '200px';
+            document.body.appendChild(downloadListContainer);
 
-            dli.style.position = 'fixed';
-            dli.style.top = '0';
-            dli.style.left = '0';
-            dli.style.width = '100%';
-            dli.style.backgroundColor = 'white';
-            dli.style.zIndex = '1000';
-            dli.style.padding = '10px';
-            dli.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-            dli.style.overflow = 'auto';
-            dli.style.maxHeight = '200px';
+            const closeButton = document.createElement("button");
+            closeButton.textContent = 'Close';
+            closeButton.style.position = 'absolute';
+            closeButton.style.top = '10px';
+            closeButton.style.right = '15px';
+            closeButton.style.backgroundColor = '#f44336';
+            closeButton.style.color = 'white';
+            closeButton.style.border = 'none';
+            closeButton.style.padding = '5px 10px';
+            closeButton.style.cursor = 'pointer';
+            downloadListContainer.appendChild(closeButton);
+
+            // Add click event to close button
+            closeButton.onclick = function() {
+                document.body.removeChild(downloadListContainer);
+            };
 
             zip.forEach((relativePath, zipEntry) => {
                 zipEntry.async("base64").then(val => {
@@ -55,17 +71,16 @@ class Archive {
                     const byteArray = new Uint8Array([...binaryString].map(char => char.charCodeAt(0)));
                     const blob = new Blob([byteArray], { type: contentType });
 
-                    const dl = document.createElement("a");
-                    dl.href = URL.createObjectURL(blob);
-                    dl.download = relativePath;
-                    dl.textContent = relativePath;
-                    dli.appendChild(dl);
-                    dl.target = "_blank";
-
-                    dl.style.display = 'block';
-                    dl.style.margin = '5px 0';
-                    dl.style.textDecoration = 'none';
-                    dl.style.color = 'blue';
+                    const downloadLink = document.createElement("a");
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = relativePath;
+                    downloadLink.textContent = relativePath;
+                    downloadLink.target = "_blank";
+                    downloadLink.style.display = 'block';
+                    downloadLink.style.margin = '5px 0';
+                    downloadLink.style.textDecoration = 'none';
+                    downloadLink.style.color = 'blue';
+                    downloadListContainer.appendChild(downloadLink);
                 });
             });
         });
