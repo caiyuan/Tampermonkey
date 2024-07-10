@@ -57,7 +57,6 @@ class Archive {
             closeButton.style.cursor = 'pointer';
             downloadListContainer.appendChild(closeButton);
 
-            // Add click event to close button
             closeButton.onclick = function() {
                 document.body.removeChild(downloadListContainer);
             };
