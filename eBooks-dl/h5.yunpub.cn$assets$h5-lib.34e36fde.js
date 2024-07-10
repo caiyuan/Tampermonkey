@@ -4,10 +4,26 @@
 /**
 * 說明：
 *
-*  修改方法
+*  1、創建副本, 修改方法 (Chrome -> DevTools -> Sources -> Overrides)
+*
 *    h5-lib.34e36fde.js -> Archive.open(e, t)
-*  啟用路徑
-*    Chrome -> DevTools -> Replace
+*
+*  2、自動點擊, 逐個下載 (Chrome -> DevTools -> Console)
+
+(function autoClick() {
+    var links = document.querySelectorAll('#dli a');
+    var index = 0;
+
+    var interval = setInterval(function() {
+        if (index >= links.length) {
+            clearInterval(interval);
+            return;
+        }
+        links[index].click();
+        index++;
+    }, 1000);
+})();
+
 */
 
 
