@@ -11,8 +11,9 @@
 *  2、自動點擊, 逐個下載 (Chrome -> DevTools -> Console)
 
 (function autoClick() {
-    var links = document.querySelectorAll('#downloadListContainer a');
+    var links = document.querySelectorAll('#dli a');
     var index = 0;
+    console.log(links.length);
 
     var interval = setInterval(function() {
         if (index >= links.length) {
