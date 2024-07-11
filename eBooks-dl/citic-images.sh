@@ -48,4 +48,10 @@ awk '
 # 高效能时间管理术 - 帕特里克·福赛思 # "https://upload.yunpub.cn/ei/202401/50/bf81792e494e849e39f8ec7a4f5812iq8z.jpg"
 # 高效能时间管理术 - 帕特里克·福赛思 # "https://upload.yunpub.cn/ei/202401/5d/61e287bb15461fa3b77969d866b0bdik17.jpg"
 #
+### 下载
+#
+# curl -o "万物本源 - 尼尔·泰泽/OEBPS/Images/b72d238341460da55160f8c5930af3i8s5.jpg" "https://upload.yunpub.cn/ei/202310/04/b72d238341460da55160f8c5930af3i8s5.jpg"
+# curl -o "万物本源 - 尼尔·泰泽/OEBPS/Images/24f3b6869f43888dab1660c111f50bi2x4.jpg" "https://upload.yunpub.cn/ei/202310/0e/24f3b6869f43888dab1660c111f50bi2x4.jpg"
+# curl -o "万物本源 - 尼尔·泰泽/OEBPS/Images/99d8aae74d4498bb5b04444e749b2fi12n.jpg" "https://upload.yunpub.cn/ei/202310/15/99d8aae74d4498bb5b04444e749b2fi12n.jpg"
+#
 # -----------------------------------------------------------------------------------
