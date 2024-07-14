@@ -17,14 +17,13 @@
     var playingVideoStyles = "";
 
     // 书架
-    if (segments[4] == 'shelf'){
+    if (segments[4] == 'shelf') {
 
-        // 护眼绿色
         const whiteStyles = `
-            html body.wr_whiteTheme .app_fullHeight {background-color: #94b399;}
-            html body.wr_whiteTheme .app_fullHeight .navBar {background-color: #94b399;}
-            html body.wr_whiteTheme .app_fullHeight [class*=navBar] {border-color: #ffffff30;}
-            html body.wr_whiteTheme .app_fullHeight [class*=navBar]:after {border-color: #ffffff30;}
+            html .wr_whiteTheme, img, [class$=logo] {filter: invert(100%);}
+            html .wr_whiteTheme .navBar {background-color: #ccc;}
+            html .wr_whiteTheme .app {background-color: #bbb;}
+            html .wr_whiteTheme [class^=navBar] {border-style: none;}
         `;
 
         GM_addStyle(whiteStyles);
