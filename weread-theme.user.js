@@ -20,10 +20,10 @@
     if (segments[4] == 'shelf') {
 
         const whiteStyles = `
-            html .wr_whiteTheme, img, [class$=logo] {filter: invert(100%);}
-            html .wr_whiteTheme .navBar {background-color: #ccc;}
-            html .wr_whiteTheme .app {background-color: #bbb;}
+            html .wr_whiteTheme .app {background-color: #ccc;}
+            html .wr_whiteTheme .navBar {background-color: #c9c9c9;}
             html .wr_whiteTheme [class^=navBar] {border-style: none;}
+            html .wr_whiteTheme, img, [class$=logo] {filter: invert(100%);}
         `;
 
         GM_addStyle(whiteStyles);
