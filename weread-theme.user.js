@@ -75,7 +75,7 @@
     else {
 
         const commonStyles = `
-            html .wr_whiteTheme .app {background-color: #f2eee9;}
+            html .wr_whiteTheme {background-color: #f2eee9;}
             html .wr_whiteTheme .navBar {background-color: #fefbf6;}
             html .wr_whiteTheme .navBar input {border: 1px solid #cfc9c0;}
             html .wr_whiteTheme [class^=navBar] {border-color: #d2cdc4;}
