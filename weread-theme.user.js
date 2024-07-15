@@ -16,22 +16,7 @@
     var segments = url.split('/');
     var playingVideoStyles = "";
 
-    // 书架
-    if (segments[4] == 'shelf') {
-
-        const whiteStyles = `
-            html .wr_whiteTheme .app {background-color: #f2eee9;}
-            html .wr_whiteTheme .navBar {background-color: #fefbf6;}
-            html .wr_whiteTheme .navBar input {border: 1px solid #cfc9c0;}
-            html .wr_whiteTheme [class^=navBar] {border-color: #d2cdc4;}
-            html .wr_whiteTheme [class*=navBar]:after {border-color: #d2cdc4;}
-            html .wr_whiteTheme, img, [class$=logo] {filter: invert(100%);}
-        `;
-
-        GM_addStyle(whiteStyles);
-    }
-
-    // 阅读
+    // 阅读页面样式
     if(segments[4] == 'reader') {
 
         // 通用配置
@@ -49,11 +34,13 @@
             /* 标题文字 */
             #routerView .app_content .readerTopBar {font-family: 'HYHuaGuan_65W';}
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
+
             /* 内容文字 */
             #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'HYQiHei_55S';}
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: 'HYShangWeiShouShuW';}
             #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYYouKai-45W';}
-            /* 翻页文字 */
+
+            /* 翻页按钮 */
             #routerView .app_content .readerHeaderButton {font-family: 'HYShuFang-55W';}
             #routerView .app_content .readerFooter_button {font-family: 'HYShuFang-55W';}
         `;
@@ -84,12 +71,16 @@
         GM_addStyle("@media screen and (max-width: 1100px) { #routerView .readerControls:hover {opacity: 1; transition: opacity 0.3s ease;} }");
     }
 
-    // 书评
-    if(segments[4] == 'bookDetail' || segments[4] == 'bookReview' || segments[4] == 'review') {
+    // 非阅读页样式
+    else {
 
-        // 通用配置
         const commonStyles = `
-            .app_content {max-width: 1200px;}
+            html .wr_whiteTheme .app {background-color: #f2eee9;}
+            html .wr_whiteTheme .navBar {background-color: #fefbf6;}
+            html .wr_whiteTheme .navBar input {border: 1px solid #cfc9c0;}
+            html .wr_whiteTheme [class^=navBar] {border-color: #d2cdc4;}
+            html .wr_whiteTheme [class*=navBar]:after {border-color: #d2cdc4;}
+            html, img, [class$=logo] {filter: invert(100%);}
         `;
 
         GM_addStyle(commonStyles);
