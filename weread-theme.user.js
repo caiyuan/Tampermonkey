@@ -81,6 +81,7 @@
             html .wr_whiteTheme [class^=navBar] {border-color: #d2cdc4;}
             html .wr_whiteTheme [class*=navBar]:after {border-color: #d2cdc4;}
             html, img, [class$=logo] {filter: invert(100%);}
+            html .wr_whiteTheme [class$=audioTag] {z-index: 1;}
         `;
 
         GM_addStyle(commonStyles);
