@@ -37,7 +37,7 @@
 
             /* 内容文字 */
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: 'HYShangWeiShouShuW';}
-            #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYShuFang-55W';}
+            #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYShuFang-65W';}
             #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'Misans VF';}
 
             /* 按钮文字 */
