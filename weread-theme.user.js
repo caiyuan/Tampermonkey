@@ -36,13 +36,12 @@
             #routerView .app_content .readerTopBar .readerTopBar_title_chapter {font-style: italic; font-weight: 400;}
 
             /* 内容文字 */
-            #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'Misans VF';}
             #routerView .app_content .readerChapterContent [class*='Title'] {font-family: 'HYShangWeiShouShuW';}
-            #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYYouKai-45W';}
+            #routerView .app_content .readerChapterContent [class*='quotation'] {font-family: 'HYShuFang-55W';}
+            #routerView .app_content .readerChapterContent [class*='content'] {font-family: 'Misans VF';}
 
-            /* 翻页按钮 */
-            #routerView .app_content .readerHeaderButton {font-family: 'HYShuFang-55W';}
-            #routerView .app_content .readerFooter_button {font-family: 'HYShuFang-55W';}
+            /* 按钮文字 */
+            #routerView .app_content button {font-family: 'HYHuaGuan_65W';}
         `;
 
         // 护眼绿色
