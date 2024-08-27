@@ -43,7 +43,7 @@ class Archive {
             downloadListContainer.style.padding = '10px';
             downloadListContainer.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
             downloadListContainer.style.overflow = 'auto';
-            downloadListContainer.style.maxHeight = '200px';
+            downloadListContainer.style.maxHeight = '100px';
             document.body.appendChild(downloadListContainer);
 
             const closeButton = document.createElement("button");
