@@ -43,7 +43,7 @@
       color: rgba(255, 255, 255, 0.3);
     `;
 
-    mediaControlPanel.innerHTML = `
+    const mediaControlButton = `
       <div id="volume-gain" data-gain="3" style="${buttonStyle}">♪</div>
       <div>
         <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 18px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;">+</div>
@@ -62,6 +62,7 @@
       <div class="rate-slow" data-rate="2.5" style="${buttonStyle}">2.5x</div>
     `;
 
+    mediaControlPanel.innerHTML = mediaControlButton;
     document.body.appendChild(mediaControlPanel);
 
     // 播放器倍速轮换
