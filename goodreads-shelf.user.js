@@ -20,11 +20,11 @@
             var ratings = info[4];
             var published = info[8];
 
-            if (avgRating >= 4 && ratings >= 2000 && published >= 2015)
+            if (avgRating >= 4 && ratings >= 2000 && published >= 2023)
             {
                 el.setAttribute("style", "display:display");
             }
-            else if (avgRating < 3.7 || ratings < 5000 || published < 2015)
+            else if (avgRating < 3.7 || ratings < 3000 || published < 2021)
             {
                 el.setAttribute("style", "display:none");
             }
