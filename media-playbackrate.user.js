@@ -9,6 +9,20 @@
 // @run-at       document-end
 // ==/UserScript==
 
+/*
+
+核心示例
+
+(function mediaSelector() {
+    const mediaElements = new Set([
+        ...document.querySelectorAll("video, audio")
+    ]);
+    return mediaElements.size ? [...mediaElements] : [];
+})()[0].playbackRate = 2.5;
+
+*/
+
+
 (function() {
     'use strict';
 
