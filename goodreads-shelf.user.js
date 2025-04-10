@@ -14,8 +14,9 @@
     document.querySelectorAll(".elementList").forEach(function(el) {
         try {
 
+
             // 书籍粗筛
-            var info = el.querySelector(".smallText").textContent.trim().replace(/(\n)|(,)|(   )/g, "").replace(/  /g, " ").split(" ");
+            var info = el.querySelector(".smallText").innerText.trim().replace(/(\n)|(,)|(   )/g, "").replace(/  /g, " ").split(" ");
             var avgRating = info[2];
             var ratings = info[4];
             var published = info[8];
@@ -25,10 +26,6 @@
                 el.setAttribute("style", "display:display");
             }
             else if (avgRating < 3.7 || ratings < 3000 || published < 2021)
-            {
-                el.setAttribute("style", "display:none");
-            }
-            else if (!published)
             {
                 el.setAttribute("style", "display:none");
             }
