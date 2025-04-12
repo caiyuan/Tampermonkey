@@ -28,6 +28,7 @@
 
     // 构建控制器面板
 
+    // Create main panel
     const mediaControlPanel = document.createElement("div");
     mediaControlPanel.id = "mediaControlPanel";
     mediaControlPanel.style.cssText = `
@@ -57,26 +58,67 @@
       color: rgba(255, 255, 255, 0.3);
     `;
 
-    const mediaControlButton = `
-      <div id="volume-gain" data-gain="3" style="${buttonStyle}">♪</div>
-      <div>
-        <div id="volume-increase" data-volume="1" style="${buttonStyle} float: left; width: 18px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;">+</div>
-        <div id="volume-decrease" data-volume="0" style="${buttonStyle} float: right; width: 18px; border-radius: 0 3px 3px 0; margin: 0 3px 0 0; padding: 3px 0;">-</div>
-      </div>
-      <div style="clear: both;"></div>
+    // Create gain button
+    const volumeGain = document.createElement("div");
+    volumeGain.id = "volume-gain";
+    volumeGain.dataset.gain = "3";
+    volumeGain.style.cssText = buttonStyle;
+    volumeGain.textContent = "♪";
+    mediaControlPanel.appendChild(volumeGain);
 
-      <div id="rate-switch" data-rate="1" style="${buttonStyle}">➟</div>
+    // Create volume controls container
+    const volumeContainer = document.createElement("div");
+    mediaControlPanel.appendChild(volumeContainer);
 
-      <div class="rate-fast" data-rate="3" style="${buttonStyle}">3x</div>
-      <div class="rate-fast" data-rate="5" style="${buttonStyle}">5x</div>
-      <div class="rate-fast" data-rate="7" style="${buttonStyle}">7x</div>
+    // Create volume increase button
+    const volumeIncrease = document.createElement("div");
+    volumeIncrease.id = "volume-increase";
+    volumeIncrease.dataset.volume = "1";
+    volumeIncrease.style.cssText = buttonStyle + " float: left; width: 18px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;";
+    volumeIncrease.textContent = "+";
+    volumeContainer.appendChild(volumeIncrease);
 
-      <div class="rate-slow" data-rate="1.5" style="${buttonStyle}">1.5x</div>
-      <div class="rate-slow" data-rate="2.0" style="${buttonStyle}">2.0x</div>
-      <div class="rate-slow" data-rate="2.5" style="${buttonStyle}">2.5x</div>
-    `;
+    // Create volume decrease button
+    const volumeDecrease = document.createElement("div");
+    volumeDecrease.id = "volume-decrease";
+    volumeDecrease.dataset.volume = "0";
+    volumeDecrease.style.cssText = buttonStyle + " float: right; width: 18px; border-radius: 0 3px 3px 0; margin: 0 3px 0 0; padding: 3px 0;";
+    volumeDecrease.textContent = "-";
+    volumeContainer.appendChild(volumeDecrease);
 
-    mediaControlPanel.innerHTML = mediaControlButton;
+    // Create clear div
+    const clearDiv = document.createElement("div");
+    clearDiv.style.clear = "both";
+    mediaControlPanel.appendChild(clearDiv);
+
+    // Create rate switch button
+    const rateSwitch = document.createElement("div");
+    rateSwitch.id = "rate-switch";
+    rateSwitch.dataset.rate = "1";
+    rateSwitch.style.cssText = buttonStyle;
+    rateSwitch.textContent = "➟";
+    mediaControlPanel.appendChild(rateSwitch);
+
+    // Create rate fast buttons
+    const rates = [
+        { rate: "3", text: "3x", className: "rate-fast" },
+        { rate: "5", text: "5x", className: "rate-fast" },
+        { rate: "7", text: "7x", className: "rate-fast" },
+        { rate: "1.5", text: "1.5x", className: "rate-slow" },
+        { rate: "2.0", text: "2.0x", className: "rate-slow" },
+        { rate: "2.5", text: "2.5x", className: "rate-slow" }
+    ];
+
+    rates.forEach(rateInfo => {
+        const rateButton = document.createElement("div");
+        rateButton.className = rateInfo.className;
+        rateButton.dataset.rate = rateInfo.rate;
+        rateButton.style.cssText = buttonStyle;
+        rateButton.textContent = rateInfo.text;
+        mediaControlPanel.appendChild(rateButton);
+    });
+
+    // Add the panel to the document
     document.body.appendChild(mediaControlPanel);
 
     // 播放器倍速轮换
@@ -86,8 +128,8 @@
         ".rate-slow": "none"
     };
 
-    const rateSwitch = mediaControlPanel.querySelector("#rate-switch");
-    rateSwitch.addEventListener("dblclick", function(event) {
+    const rateSwitchButton = mediaControlPanel.querySelector("#rate-switch");
+    rateSwitchButton.addEventListener("dblclick", function(event) {
         Object.entries(rateDisplayMaps).forEach(([selector, display]) => {
             rateDisplayMaps[selector] = display === "block" ? "none" : "block";
         });
@@ -98,7 +140,7 @@
         });
     });
 
-    rateSwitch.dispatchEvent(new MouseEvent("dblclick"));
+    rateSwitchButton.dispatchEvent(new MouseEvent("dblclick"));
 
     // 控制器功能实现
 
