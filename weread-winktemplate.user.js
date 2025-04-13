@@ -13,8 +13,9 @@
 (function() {
     'use strict';
 
-    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB'; font-size: 1.05rem; -webkit-font-smoothing: subpixel-antialiased;}");
-
     GM_addStyle(".readerAIChatPanel {width: 860px !important; margin-left: -360px !important;}");
+
+    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB'; -webkit-font-smoothing: subpixel-antialiased;}");
+    GM_addStyle("#multi-turn-stream-container * {font-size: 1rem !important;}");
 
 })();
