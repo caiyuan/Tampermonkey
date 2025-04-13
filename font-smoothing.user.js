@@ -12,7 +12,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle("* {-webkit-font-smoothing: antialiased;}");
-    GM_addStyle("* {-moz-osx-font-smoothing: grayscale;}");
+    GM_addStyle("* {-webkit-font-smoothing: subpixel-antialiased;}");
 
 })();
