@@ -5,6 +5,7 @@
 // @description  平滑字体
 // @author       Ryan
 // @match        ://*/*
+// @exclude      https://weread.qq.com/web/reader/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
