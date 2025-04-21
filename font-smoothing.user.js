@@ -6,6 +6,7 @@
 // @author       Ryan
 // @match        ://*/*
 // @exclude      https://weread.qq.com/web/reader/*
+// @exclude      *://*:8080/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
