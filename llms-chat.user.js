@@ -14,7 +14,7 @@
     'use strict';
 
     // doubao-chat
-    GM_addStyle(".message-content {font-family: 'LXGW WenKai GB';}");
+    GM_addStyle("div.message-content {font-family: 'LXGW WenKai GB';}");
     // doubao-thread
     GM_addStyle("div[data-testid='receive_message'] {font-family: 'LXGW WenKai GB';}");
 
