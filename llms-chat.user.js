@@ -4,8 +4,8 @@
 // @version      0.1
 // @description  LLMs Chat
 // @author       Ryan
-// @match        https://www.doubao.com/chat/*
-// @match        https://yuanbao.tencent.com/chat/*
+// @match        https://www.doubao.com/*
+// @match        https://yuanbao.tencent.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
@@ -13,8 +13,11 @@
 (function() {
     'use strict';
 
-    // doubao
+    // doubao-chat
     GM_addStyle(".message-content {font-family: 'LXGW WenKai GB';}");
+    // doubao-thread
+    GM_addStyle("div[data-testid='receive_message'] {font-family: 'LXGW WenKai GB';}");
+
 
     // yuanbao
     GM_addStyle("div[data-conv-speaker='ai'] * {font-family: 'LXGW WenKai GB';}");
