@@ -13,8 +13,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle(".readerAIChatPanel {width: 860px !important; margin-left: -360px !important;}");
-
     GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB';}");
 
 })();
