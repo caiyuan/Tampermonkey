@@ -15,4 +15,6 @@
 
     GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB';}");
 
+    GM_addStyle("@media (max-width: 767px) {.readerAIChatPanel {width: 100%; margin-left: -50%; z-index: 999;}}");
+
 })();
