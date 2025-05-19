@@ -10,7 +10,6 @@
 
 // @match        https://chatgpt.com/*
 // @match        https://gemini.google.com/*
-// @match        https://grok.com/*
 
 // @grant        GM_addStyle
 // @run-at       document-start
