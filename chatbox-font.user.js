@@ -12,7 +12,7 @@
 // @match        https://gemini.google.com/*
 
 // @grant        GM_addStyle
-// @run-at       document-start
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
