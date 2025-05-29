@@ -7,6 +7,7 @@
 
 // @match        https://www.doubao.com/*
 // @match        https://yuanbao.tencent.com/*
+// @match        https://chat.deepseek.com/*
 
 // @match        https://chatgpt.com/*
 // @match        https://gemini.google.com/*
@@ -18,6 +19,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle("body * { font-family: 'LXGW WenKai GB' }");
+    GM_addStyle("body * { font-family: 'LXGW WenKai GB'; font-weight: 300; }");
 
 })();
