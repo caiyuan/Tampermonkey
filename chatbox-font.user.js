@@ -10,7 +10,6 @@
 // @match        https://chat.deepseek.com/*
 
 // @match        https://chatgpt.com/*
-// @match        https://gemini.google.com/*
 
 // @grant        GM_addStyle
 // @run-at       document-end
@@ -19,6 +18,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle("body * { font-family: 'LXGW WenKai GB'; font-weight: 300; }");
+    GM_addStyle("body * { font-family: 'LXGW WenKai GB' !important; font-weight: 300; }");
 
 })();
