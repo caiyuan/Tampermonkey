@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  微信阅读 书架 深色模式
 // @author       Ryan
-// @match        https://weread.qq.com/web/shelf/*
+// @match        https://weread.qq.com/web/shelf*
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
