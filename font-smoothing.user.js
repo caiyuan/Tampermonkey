@@ -5,7 +5,7 @@
 // @description  平滑字体
 // @author       Ryan
 // @match        ://*/*
-// @exclude      ://weread.qq.com/*
+// @exclude      *://weread.qq.com/*
 // @exclude      *://*:8080/*
 // @grant        GM_addStyle
 // @run-at       document-start
