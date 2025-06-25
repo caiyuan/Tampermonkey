@@ -5,6 +5,7 @@
 // @description  倍速播放器
 // @author       Ryan
 // @match        ://*/*
+// @exclude      *://weread.qq.com/*
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
