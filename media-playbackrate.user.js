@@ -224,7 +224,7 @@
     setInterval(function() {
         const mediaElements = mediaSelector();
         mediaControlPanel.style.display = mediaElements.length ? "block" : "none";
-    }, 30000);
+    }, 15000);
 
     // 音视频音量增益
 
