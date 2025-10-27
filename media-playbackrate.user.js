@@ -37,7 +37,7 @@
       position: fixed !important;
       visibility: visible !important;
       top: 20%;
-      right: 15px;
+      right: 5px;
       width: 45px;
       margin: 0;
       padding: 0;
