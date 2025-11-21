@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    GM_addStyle("* {font-family: 'LXGW WenKai' !important; color: #CCC;}");
+    GM_addStyle("* {font-family: 'LXGW WenKai' !important;}");
 
     GM_addStyle("html {filter: invert(1) hue-rotate(180deg);}");
 
