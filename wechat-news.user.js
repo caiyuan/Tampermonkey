@@ -15,7 +15,6 @@
     GM_addStyle("* {font-family: 'LXGW WenKai' !important;}");
 
     GM_addStyle("html {filter: invert(1) hue-rotate(180deg);}");
-
     GM_addStyle("video, img {filter: invert(1) hue-rotate(180deg);}");
 
 })();
