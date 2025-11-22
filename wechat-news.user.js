@@ -12,6 +12,6 @@
 (function() {
     'use strict';
 
-    GM_addStyle("* {font-family: 'LXGW WenKai' !important;}");
+    GM_addStyle("* {font-family: 'LXGW WenKai';}");
 
 })();
