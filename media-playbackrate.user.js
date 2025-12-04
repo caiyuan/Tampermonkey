@@ -38,7 +38,7 @@
       visibility: visible !important;
       top: 20%;
       right: 5px;
-      width: 45px;
+      width: 37px;
       margin: 0;
       padding: 0;
       border-radius: 3px;
@@ -75,7 +75,7 @@
     const volumeIncrease = document.createElement("div");
     volumeIncrease.id = "volume-increase";
     volumeIncrease.dataset.volume = "1";
-    volumeIncrease.style.cssText = buttonStyle + " float: left; width: 18px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;";
+    volumeIncrease.style.cssText = buttonStyle + " float: left; width: 14px; border-radius: 3px 0 0 3px; margin: 0 0 0 3px; padding: 3px 0;";
     volumeIncrease.textContent = "+";
     volumeContainer.appendChild(volumeIncrease);
 
@@ -83,7 +83,7 @@
     const volumeDecrease = document.createElement("div");
     volumeDecrease.id = "volume-decrease";
     volumeDecrease.dataset.volume = "0";
-    volumeDecrease.style.cssText = buttonStyle + " float: right; width: 18px; border-radius: 0 3px 3px 0; margin: 0 3px 0 0; padding: 3px 0;";
+    volumeDecrease.style.cssText = buttonStyle + " float: right; width: 14px; border-radius: 0 3px 3px 0; margin: 0 3px 0 0; padding: 3px 0;";
     volumeDecrease.textContent = "-";
     volumeContainer.appendChild(volumeDecrease);
 
