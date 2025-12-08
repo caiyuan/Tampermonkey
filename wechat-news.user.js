@@ -14,4 +14,9 @@
 
     GM_addStyle("* {font-family: 'LXGW WenKai';}");
 
+    GM_addStyle("div#page-content {background-color: dimgray; padding: unset;}");
+    GM_addStyle("div#page-content>div {background-color: var(--weui-BG-2); padding: 20px 20px 0 20px; max-width: 770px;}");
+    GM_addStyle("div#unlogin_bottom_bar {display: none !important;}");
+    GM_addStyle("body#activity-detail {padding-bottom: 0 !important;}");
+
 })();
