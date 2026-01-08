@@ -17,6 +17,7 @@
 
     GM_addStyle("@media (max-width: 767px) {.readerAIChatPanel {width: 100%; margin-left: -50%; z-index: 999;}}");
 
-    GM_addStyle(".readerTopBar {height: 45px; font-family: cursive;}");
+    GM_addStyle(".readerTopBar {height: 35px;}");
+    GM_addStyle(".readerTopBar * {font-family: 'STFangsong'; font-size: 12px !important;}");
 
 })();
