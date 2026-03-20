@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    GM_addStyle("* {font-family: 'LXGW WenKai';}");
+    GM_addStyle("* {font-family: 'LXGW WenKai GB';}");
 
     GM_addStyle("div#page-content {background-color: #262628; padding: unset;}");
     GM_addStyle("div#page-content>div {background-color: var(--weui-BG-2); padding: 20px 60px 0 60px; max-width: 720px;}");
