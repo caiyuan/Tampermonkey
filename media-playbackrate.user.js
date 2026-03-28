@@ -106,7 +106,7 @@
         { rate: "5", text: "5x", className: "rate-fast" },
         { rate: "7", text: "7x", className: "rate-fast" },
         { rate: "1.5", text: "1.5x", className: "rate-slow" },
-        { rate: "1.75", text: "1.75x", className: "rate-slow" },
+        { rate: "1.75", text: "1.75", className: "rate-slow" },
         { rate: "2.0", text: "2.0x", className: "rate-slow" },
         { rate: "2.5", text: "2.5x", className: "rate-slow" }
     ];
