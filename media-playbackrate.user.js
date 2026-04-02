@@ -222,7 +222,10 @@
     // 控制器是否显示
 
     mediaControlPanel.style.display = "none";
-    setInterval(function() {
+    let mediaCheckTimer = setInterval(function() {
+        if (mediaControlPanel.style.display === "block") {
+            clearInterval(mediaCheckTimer);
+        }
         const mediaElements = mediaSelector();
         mediaControlPanel.style.display = mediaElements.length ? "block" : "none";
     }, 15000);
