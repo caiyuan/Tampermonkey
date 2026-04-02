@@ -223,12 +223,12 @@
 
     mediaControlPanel.style.display = "none";
     let mediaCheckTimer = setInterval(function() {
-        if (mediaControlPanel.style.display === "block") {
+        const mediaElements = mediaSelector();
+        if (mediaElements.length) {
+            mediaControlPanel.style.display = "block";
             clearInterval(mediaCheckTimer);
         }
-        const mediaElements = mediaSelector();
-        mediaControlPanel.style.display = mediaElements.length ? "block" : "none";
-    }, 15000);
+    }, 5000);
 
     // 音视频音量增益
 
