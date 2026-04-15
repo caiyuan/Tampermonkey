@@ -225,12 +225,12 @@
         const mediaElements = mediaSelector();
         if (mediaElements.length) {
             mediaControlPanel.style.display = "block";
-            clearInterval(mediaCheckTimer);
+            // clearInterval(mediaCheckTimer);
         }
     }, 5000);
 
     setTimeout(() => {
-        clearInterval(mediaCheckTimer);
+        // clearInterval(mediaCheckTimer);
     }, 20000);
 
     // 音视频音量增益
