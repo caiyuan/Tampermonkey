@@ -13,11 +13,10 @@
 (function() {
     'use strict';
 
-    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB'; -webkit-font-smoothing: subpixel-antialiased;}");
+    GM_addStyle(".readerTopBar {font-family: 'LXGW WenKai GB Screen'; height: 35px; filter: invert(10%);}");
+    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB Screen';}");
 
-    GM_addStyle("@media (max-width: 767px) {.readerAIChatPanel {width: 100%; margin-left: -50%; z-index: 999;}}");
-
-    GM_addStyle(".readerTopBar {height: 35px;}");
-    GM_addStyle(".readerTopBar * {font-family: 'LXGW WenKai GB'; font-size: 12px !important;}");
+    GM_addStyle("@media (max-width: 1023px) {.readerContent .app_content, .app_content>div {max-width: 670px;}}");
+    GM_addStyle("@media (max-width: 1023px) {.readerControls {left: 55%;}}");
 
 })();
