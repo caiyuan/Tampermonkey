@@ -4,8 +4,7 @@
 // @version      0.1
 // @description  fonts
 // @author       Ryan
-// @match        https://yuanbao.tencent.com/*
-// @match        https://www.doubao.com/chat/*
+// @match        https://www.doubao.com/*
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
