@@ -6,7 +6,7 @@
 // @author       Ryan
 // @match        https://weread.qq.com/web/shelf*
 // @grant        GM_addStyle
-// @run-at       document-end
+// @run-at       document-start
 // ==/UserScript==
 
 
