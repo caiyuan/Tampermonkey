@@ -16,9 +16,9 @@
     GM_addStyle(".readerTopBar {font-family: 'LXGW WenKai GB Screen'; height: 35px; filter: invert(7%);}");
     GM_addStyle(".readerTopBar * {font-size: 0.75rem;}");
 
-    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB Screen';}");
 
-    GM_addStyle("@media (max-width: 1023px) {.readerContent .app_content, .app_content>div {max-width: 670px;}}");
-    GM_addStyle("@media (max-width: 1023px) {.readerControls {left: 55%;}}");
+    GM_addStyle(".readerAIChatPanel {margin-left: -50%; width: stretch;}");
+    GM_addStyle(".wr_mask_Show:has(+ .readerAIChatPanel) {z-index: 999; height: 56px; opacity: 0 !important;}");
+    GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB Screen';}");
 
 })();
