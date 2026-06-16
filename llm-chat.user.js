@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         ai-chat
+// @name         llm-chat
 // @namespace    https://github.com/caiyuan/Tampermonkey
 // @version      0.1
 // @description  fonts
