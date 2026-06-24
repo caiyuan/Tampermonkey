@@ -21,4 +21,8 @@
     GM_addStyle(".wr_mask_Show:has(+ .readerAIChatPanel) {z-index: 999; height: 56px; opacity: 0 !important;}");
     GM_addStyle("#multi-turn-stream-container * {font-family: 'LXGW WenKai GB Screen';}");
 
+
+    GM_addStyle("html body.wr_whiteTheme {background-color: #e5e4db;}");
+    GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #f7f4ec;}");
+
 })();
