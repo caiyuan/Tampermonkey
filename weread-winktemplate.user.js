@@ -24,5 +24,7 @@
 
     GM_addStyle("html body.wr_whiteTheme {background-color: #e5e4db;}");
     GM_addStyle(".wr_whiteTheme .readerContent .app_content {background-color: #f7f4ec;}");
+    GM_addStyle(".wr_whiteTheme button[class*='button'] {background-color: #f7f4ec;}");
+    GM_addStyle(".wr_whiteTheme button[class*='button']:hover {background-color: #f7f4ec;}");
 
 })();
